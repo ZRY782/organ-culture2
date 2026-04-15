@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    积分账单
+</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+         background: linear-gradient(to bottom,#218ADF 10%,#A8D7FD 30%,#A8D7FD 100%);
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        position:relative;
+    }
+    .bottom-container{
+        width:393px;
+        height:519px;
+       background-color: #FBFBFB;
+       
+        margin-top:270px;
+        }
+   .back-btn{
+        font-size:25px;
+            color:#000;
+            text-decoration: none;
+          width:50px;
+          position:absolute;
+          left:20px;
+          margin-top:70px;
+          z-index:10;
+    }
+    
+    .page-title{
+        font-size:24px;
+            color:#ffffff;
+            margin-top:70px;
+            flex:1;
+            width:100%;
+            text-align:center;
+            align-items: center;
+    }
+    .left-btn{
+        position:absolute;
+        left:0px;
+        top:145px;
+        color:#fff;
+        background-color:#017BDD ;
+        border-radius:0 50px 50px 0 ;
+        width:80px;
+        height:26px;
+        font-size:12px;
+        text-align: center;
+        align-items: center;
+        line-height: 26px;
+    }
+    .page-title2{
+        color:#fff;
+        font-size:40px;
+        text-align: center;
+        align-items: center;
+       top:133px;
+        position: absolute;
+        flex:1;
+    }
+    .page-title3{
+        color:#fff;
+        font-size:15px;
+        text-align: center;
+        align-items: center;
+       top:190px;
+        position: absolute;
+        flex:1;
+        z-index:5;
+    }
+    .top-img2{
+        width:300px;
+        height:343px;
+        position:absolute;
+        top:95px;
+        left:180px;
+        z-index:1;
+    }
+    .middle-container{
+        width:337px;
+        height:304px;
+        border-radius:15px ;
+        background-color: #ffff;
+        margin-left:28px;
+        margin-top:-125px;
+        z-index:30;
+        position:relative;
+    }
+    .middle-title{
+        color:#017BDD;
+        font-size:13px;
+        padding:10px;
+        text-align: center;
+        align-items: center;
+        margin-left:15px;
+       position:static;
+        
+
+    }
+    .integral-list{
+        width:100%;
+       
+
+    }
+    .integral-item{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:12px 0;
+        border-bottom:1px solid #f0f0f0;
+        margin-left: 20px;
+        margin-right:20px;
+       
+        }
+    .item-left{
+        text-align:left;
+       
+    }
+    .item-name{
+        font-size:14px;
+        color:#000;
+        margin-bottom:5px;
+    }
+    .item-time{
+        font-size:13px;
+        color:#B7B7B7;
+    }
+    .item-point{
+        font-size:16px;
+        color:#F7C200;
+        font-weight: bold;
+    }
+    .item-no{
+        font-size:12px;
+        color:#B7B7B7;
+        text-align: center;
+        margin-top:20px;
+    }
+    </style>
+    </head>
+    <body>
+       
+        <div class="main-container">
+            
+                 <div class="top-img">
+                 <img src="picture/Status bar.png"class="top-img">
+            </div>
+           
+            <div class="main-container">
+                <a href="jfsc.html"class="back-btn">&lt;</a>
+            <div class="page-title">积分账单</div>
+             <div class="left-btn">积分明细</div>
+             <div class="page-title2">100</div>
+             <div class="page-title3">我的积分</div>
+             <div class="top-img2">
+                <img src="picture/jb2.png">
+             </div>
+            <div class="bottom-container">
+            <div class="middle-container">
+                <div class="middle-title">积分明细</div>
+                <div class="integral-list">
+                    <div class="integral-item">
+                    <div class="item-left">
+                        <div class="item-name">购买一箱瓯柑</div>
+                          <div class="item-time">2025.08.12  12：15：50</div>
+                    </div>
+                    <div class="item-point">+50</div>
+                </div>
+                 <div class="integral-item">
+                    <div class="item-left">
+                        <div class="item-name">观看一次直播</div>
+                          <div class="item-time">2025.08.13  9：45：50</div>
+                    </div>
+                    <div class="item-point">+10</div>
+                </div>
+                 <div class="integral-item">
+                    <div class="item-left">
+                        <div class="item-name">知识答题</div>
+                          <div class="item-time">2025.08.14  11：25：50</div>
+                    </div>
+                    <div class="item-point">+40</div>
+                </div>
+                <div class="item-no">没有更多啦</div>
+                </div>
+                
+
+               
+
+               
+             </div>
+            
+            </div>
+            </div>
+           
+          
+            
+        </div>
+        
+    </body>

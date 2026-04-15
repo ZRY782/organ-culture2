@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>直播</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            font-family: "微软雅黑", sans-serif;
+        }
+        .zhibo-container {
+            width: 393px;
+            height: 852px;
+            background-color:#FAFAFA;
+            position:relative;
+            overflow: hidden;
+        }
+        .top-green-bar{
+            width:100%;
+            background-color: #A8E27B;
+            position:absolute;
+            height:150px;
+            left:0;
+            z-index:1;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    .top-nav{
+        width:100%;
+        height:60px;
+        display:flex;
+        align-items:center;
+        padding:0 16px;
+       
+        z-index:30;
+        margin-top:73px;
+    }
+    .back-btn{
+        color:#fff;
+        font-size: 25px;
+        text-decoration: none;
+        margin-right:20px;
+        margin-left:22px;
+    }
+    .zhibo-title{
+        color:#fff;
+        font-size:28px;
+        font-weight:bold;
+        margin:0 auto ;
+        position:relative;
+        left:-5px;
+    }
+    .content-scroll{
+        width:100%;
+        height:702px;
+        padding-top:150px;
+
+        padding-bottom:15px;
+        overflow-y:auto;
+        scrollbar-width:none;
+        -ms-overflow-style:none;
+    }
+    .content-scroll::-webkit-scrollbar{
+        display:none;
+    }
+      .top-right-icons{
+        display:flex;
+        gap:15px;
+        margin-right:10px;
+      }
+      .top-right-icons span{
+        width:24px;
+        height:24px;
+        color:#fff;
+      }
+    .zhibo-box{
+        width:95%;
+        background-color:#fff;
+        border-radius:0 0 8px 8px;
+        margin:10px auto 15px auto;
+        overflow:hidden;
+        box-shadow:0 2px 5px rgba(0,0,0,0.1);
+        position: relative;
+    }
+    .zhibo-img{
+        width:100%;
+        height:180px;
+        object-fit: cover;
+        z-index:1;
+    }
+    .zhibo-content{
+        padding :10px;
+    }
+    .zhibo-title2{
+        font-size: 16px;
+        color:#5C5C5C;;
+        margin-bottom:8px;
+        margin-left:5px;
+        margin-top:2px;
+    }
+    .zhibo-title3{
+        font-size:12px;
+        color:#727272;
+        margin-bottom:20px;
+        margin-left:10px;
+    }
+    .zhibo-foot{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        position: relative;
+    }
+    .score-title{
+        font-size:12px;
+        color:#F88B38;
+        font-weight:bold;
+        margin-bottom:20px;
+    }
+    .live-status,.live-wait{
+      position:absolute;
+        top:20px;
+        right:20px;
+        background-color:#F81E1E ;
+        border-radius:20px;
+        border:none;
+        color:#fff;
+        padding:3px 8px;
+        font-size:12px;
+        z-index:3;
+    }
+    .live-wait{
+        background-color: #FA872C;
+       
+    }
+     
+        </style>
+ </head>
+ <body>
+    <div class="zhibo-container">
+         <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+            <div class="top-green-bar">
+            <div class="top-nav">
+                <a href="sc.html"class="back-btn">&lt;</a>
+                <div class="zhibo-title">助农直播-瓯柑专场</div>
+                <div class="top-right-icons">
+                    <img src="picture/bell.png">
+                    <img src="picture/Group18.png">
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+        <div class="content-scroll">
+            <div class="zhibo-box">
+                <div class="live-status">直播中</div>
+                <img src="picture/zhibo1.png" class="zhibo-img">
+                
+                <div class="zhibo-content">
+                    <div class="zhibo-title2">瓯柑采摘现场，新鲜直供</div>
+                    <div class="zhibo-foot">
+                         <div class="zhibo-title3">
+                      果农张大叔
+                    </div>
+                    <div class="score-title">+10积分</div>
+                    </div>
+                   
+                </div>
+
+        </div>
+          <div class="zhibo-box">
+                <div class="live-wait">即将开始</div>
+                <img src="picture/zhibo2.png" class="zhibo-img">
+                
+                <div class="zhibo-content">
+                    <div class="zhibo-title2">聆听瓯柑故事，感受千年传承</div>
+                    <div class="zhibo-foot">
+                         <div class="zhibo-title3">
+                      文化讲解员 14：30开始
+                    </div>
+                    <div class="score-title">+10积分</div>
+                    </div>
+                   
+                </div>
+
+        </div>
+
+           <div class="zhibo-box">
+                <div class="live-status">直播中</div>
+                <img src="picture/zhibo3.png" class="zhibo-img">
+                
+                <div class="zhibo-content">
+                    <div class="zhibo-title2">瓯柑深加工，美味无添加</div>
+                    <div class="zhibo-foot">
+                         <div class="zhibo-title3">
+                      加工厂李师傅
+                    </div>
+                    <div class="score-title">+10积分</div>
+                    </div>
+                   
+                </div>
+
+        </div>
+        </div>
+        
+    </div>
+ </body>

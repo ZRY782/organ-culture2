@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    我的
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+        background-color: #f0f0f0;
+    }
+   
+     .main-container{
+        width:393px;
+        height:852px;
+        background-size:cover;
+        background-position:center;
+        position:relative;
+        background-color: #F9F9F9;
+         
+    }
+    .top-box{
+        width:100%;
+        height:272px;
+        background-image:url('picture/Group17.png');
+       background-repeat:no-repeat;
+       position:relative;
+        margin-bottom:0px;
+    }
+    .user-name{
+        font-size:20px;
+        font-weight: bold;
+        margin-left:108px;
+        margin-top:88px;
+        position: absolute;
+    }
+    .user-id{
+        font-size:14px;
+        position: absolute;
+        margin-left:108px;
+        margin-top:119px;
+    }
+    .user-sm{
+        width:54px;
+        height:20px;
+        color:#A39D9D;
+        background-color:#FFFFFF ;
+        border-radius: 10px;
+        border:none;
+        font-size:11px;
+        margin-left:195px;
+        margin-top:88px;
+        position: absolute;
+        text-align: center;
+        align-items: center;
+        line-height:20px;
+    }
+    .user-jf{
+        font-size:13px;
+        position: absolute;
+        margin-left:108px;
+        margin-top:139px;
+        
+    }
+    .user-num{
+        font-size:24px;
+        color:#F4810F;
+        position: absolute;
+        margin-left:140px;
+        margin-top:132px;
+        font-weight: bold;
+    }
+    .user-128{
+        font-size:14px;
+        position: absolute;
+        margin-left:108px;
+        margin-top:169px;
+       
+    }
+    .user-dt{
+         font-size:14px;
+        position: absolute;
+        margin-left:108px;
+        margin-top:189px;
+    }
+    .ueser-56{
+        font-size:14px;
+        position: absolute;
+        margin-left:200px;
+        margin-top:169px;
+    }
+    .user-fs{
+         font-size:14px;
+        position: absolute;
+        margin-left:195px;
+        margin-top:189px;
+    }
+    .ueser-20{
+        font-size:14px;
+        position: absolute;
+        margin-left:292px;
+        margin-top:169px;
+    }
+    .user-gz{
+         font-size:14px;
+        position: absolute;
+        margin-left:289px;
+        margin-top:189px;
+    }
+    .medal-section{
+        width:393px;
+        height:154px;
+        background-color: #fff;
+       position:absolute;
+       top:215px;
+       left:0;
+    }
+    .medal-insidebox{
+        width:337px;
+        height:134px;
+        border-radius:10px;
+        background-color:#FFF7E2;
+        margin-top:10px;
+        margin-left:30px;
+    }
+    .orange-box{
+        width:128px;
+        height:20px;
+        background-color: #FF9D48;
+        border-radius:10px;
+        border:none;
+        top:10px;
+        margin-left:10px;
+        position:relative;
+    }
+    .section-title{
+        font-size:15px;
+        color:#fff;
+        text-align:center;
+        align-items: center;
+
+    }
+    .medal-item{
+        text-align:center;
+        display:flex;
+        flex-direction: column;
+        gap:5px;
+    }
+    .medal-img{
+        display:flex;
+        justify-content: center;
+        margin-top:15px;
+        margin-left:130px;
+        width:85px;
+        height:74px;
+        
+        align-items: center;
+        margin-bottom:5px;
+        object-fit:contain;
+        gap:70px;
+    }
+    .medal-name{
+        font-size:13px;
+        color:#000;
+       text-align:center;
+       white-space:nowrap;
+    }
+    .middle-btn{
+        width:calc(100%-40px);
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:8px;
+        margin:110px 10px 15px;
+
+    }
+    .middle-btn2{
+        background-color:#fff;
+        border-radius: 10px;
+        height:80px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration:none;
+    }
+    .btn-icon1{
+        width:92px;
+        height:58px;
+        margin-bottom:1px;
+    }
+    .btn-icon2{
+         width:44px;
+        height:46px;
+        margin-bottom:3px;
+        margin-top:10px;
+    }
+    .btn-icon3{
+         width:45px;
+        height:45px;
+        margin-bottom:5px;
+         margin-top:6px;
+    }
+    .btn-icon4{
+         width:50px;
+        height:50px;
+        margin-bottom:6px;
+    }
+    .middle-text{
+        font-size:14px;
+        color:#000;
+        margin-bottom:4px;
+
+    }
+    .func-list{
+        width:393px;
+        height:286px;
+       margin-top:6px;
+        position:absolute;
+        background-color: #fff;
+        
+    }
+    .list-item{
+        background-color: #FFF7E2;
+        width:90%;
+        height:47px;
+       
+        border-radius: 7px;
+       margin:0 auto 10px;
+         display:flex; 
+         align-items: center;
+         
+        
+    }
+    .item-img{
+        width:40px;
+        height:40px;
+        margin-right:10px;
+
+    }
+    .item-text{
+        font-size:16px;
+        color:#000;
+        text-align:center;
+       text-align:left;
+       flex:1;
+       
+    }
+    </style>
+    </head>
+    <body>
+        <div class="main-container">
+            
+            <div class="top-img">
+                <img src="picture/Status bar.png"class="top-img">
+            </div>
+            <div class="top-box">
+                <div class="user-name">一颗瓯柑</div>
+                <div class="user-id">id:123456789</div>
+                <div class="user-sm">去实名</div>
+                <div class="user-jf">积分：</div>
+                <div class="user-num">100</div>
+                <div class="user-128">128</div>
+                <div class="user-dt">动态</div>
+                <div class="ueser-56">56</div>
+                <div class="user-fs">粉丝</div>
+                <div class="ueser-20">20</div>
+                <div class="user-gz">关注</div>
+            </div>
+          <div class="medal-section">
+            <div class="medal-insidebox">
+                <div class="orange-box">
+                    <div class="section-title">我的文化勋章</div>
+                </div>
+                <div class="medal-img">
+                    <div class="medal-item">
+                        <img src="picture/xz1.png">
+                        <div class="medal-name">故事传播爱好者</div>
+                    </div>
+                    <div class="medal-item">
+                        <img src="picture/xz2.png">
+                        <div class="medal-name">知识答题小能手</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+ <div class="middle-btn">
+    <div class="middle-btn2">
+        <img src="picture/qb.png" class="btn-icon1">
+        <a href="yhq.html"style="text-decoration:none;color:#000"> <div class="middle-text">券包</div></a>
+    </div> 
+    <div class="middle-btn2">
+        <img src="picture/ax.png" class="btn-icon2">
+        <a href="wdsc.html"style="text-decoration:none;color:#000"><div class="middle-text">收藏</div></a>
+    </div>
+    <div class="middle-btn2">
+        <img src="picture/jf.png" class="btn-icon3">
+       <a href="jfsc.html"style="text-decoration:none"> <div class="middle-text">积分商城</div></a>
+    </div>
+     <div class="middle-btn2">
+        <img src="picture/dd.png" class="btn-icon4">
+        <div class="middle-text">我的订单</div>
+    </div>
+ </div>
+<div class="func-list">
+<div class="list-item"style="margin-top:30px">
+    <img src="picture/dz.png" class="item-img">
+    <div class="item-text">我的地址</div>
+</div>
+<div class="list-item">
+    <img src="picture/zn.png" class="item-img">
+    <div class="item-text">预约记录</div>
+</div>
+<div class="list-item">
+    <img src="picture/gw.png" class="item-img">
+   <a href="gwc.html"style="text-decoration:none;color:#000"><div class="item-text">购物车</div></a> 
+</div>
+<div class="list-item">
+    <img src="picture/sz.png" class="item-img">
+    <div class="item-text">设置</div>
+</div>
+</div>
+
+     <div class="bottom-bar">
+        <div class="bottom-item ">
+          <a href="shouye.html"> <img src="picture/home.png"></a> 
+                    <span>首页</span>
+                </div>
+                <div class="bottom-item ">
+                   <a href="sc.html"><img src="picture/store.png"></a>
+                    <span>商城</span>
+                </div>
+                <div class="bottom-item ">
+                   <a href="shequ.html"> <img src="picture/community.png"></a>
+                    <span>社区</span>
+                </div><div class="bottom-item active">
+                   <a href="wd.html">  <img src="picture/person1.png"></a>
+                    <span>我的</span>
+                </div>
+            </div>
+            </div>
+        
+    </body>
+    </html>

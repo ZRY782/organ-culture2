@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    采摘体验
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+         background-color:#FFFEF1;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        position:relative;
+        
+       
+    }
+    .top-container{
+        width:393px;
+        height:213px;
+        top:0;
+         
+          justify-content: space-between;
+          align-items:center;
+          position:relative;
+
+
+    }
+    .top-title{
+        font-size:26px;
+        text-align: center;
+        align-items: center;
+        color:#000;
+        font-weight:bold;
+        top:85px;
+        left:80px;
+        position: absolute;
+    }
+    .back-btn{
+        font-size:30px;
+            color:#000;
+            text-decoration: none;
+          width:25px;
+          top:79px;
+          margin-left:20px;
+          position: relative;
+          z-index:10;
+    }
+    .kf-btn{
+        font-size: 12px;
+        color:#fff;
+        border-radius: 13px;
+        background-color: #F88B38;
+        width:69px;
+        height:25px;
+        position: relative;
+        top:50px;
+        left:300px;
+        font-weight: bold;
+        text-align: center;
+        align-items: center;
+        line-height:25px;
+        cursor: pointer;
+    }
+    .background-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; 
+        pointer-events: none; 
+    }
+    
+    .background-img img {
+        width: 228px;
+        height: 321px;
+        position: absolute;
+        top: 290px;
+        left: 185px;
+    }
+    .first-box{
+        width:270px;
+        height:80px;
+        border-radius: 5px;
+        position: relative;
+        border:2px solid #F88B38;
+        background-color:#FFFEF1;
+        margin-bottom:20px;
+        margin-left:60px;
+        top:-10px;
+      
+        display: flex;
+        align-items: center;
+        padding-left: 10px; 
+        z-index:10;
+
+    }
+    .first-img{
+      width:130px;
+        height:119px;
+        display: flex;
+        align-items: center;
+    justify-content: center;
+    margin-right: 15px; 
+    position: relative;
+    left: -20px;
+       
+
+    }
+    .first-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .text-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1; 
+        min-width:0;
+    }
+    .first-title{
+        font-size:20px;
+        color:#000;
+        font-weight: bold;
+        margin-bottom:3px;
+        position:relative;
+        left:-20px;
+        top:-10px;
+    }
+    .first-title2{
+        font-size:12px;
+        color:#5E5959;
+       
+         position:relative;
+        left:-40px;
+        white-space: nowrap;
+    }
+    .second-box{
+         width:200px;
+        height:85px;
+        border-radius: 5px;
+        position: relative;
+        border:2px solid #F88B38;
+        background-color:#FFFEF1;
+        margin-bottom:15px;
+        margin-left:90px;
+        top:-15px;
+      z-index:10;
+        display: flex;
+        align-items: center;
+        padding-left: 10px; 
+    }
+    .divider {
+            border-bottom: 1px dashed #ff9933;
+            top:-20px;
+            z-index: 30;
+            position: relative;
+        }
+        .notice-title{
+            font-size:28px;
+            font-weight: bold;
+            color:#000;
+            position:relative;
+            top:-10px;
+            left:140px;
+        }
+          .notice-text {
+            font-size: 13px;
+            color: #7A7A7A;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            text-align: center;
+            align-items: center;
+            top:-5px;
+            position:relative;
+        }
+
+        .book-btn {
+            display: block;
+            width: 153px;
+            height: 49px;
+            line-height: 49px;
+            background-color: #F4810F;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 22px;
+            margin: 0 auto;
+            position:relative;
+            top:-20px;
+            cursor: pointer;
+        }
+    </style>
+    
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="background-img">
+                <img src="picture/bgt.png">
+            </div>
+            <div class="top-container">
+                <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+        </div> 
+       <a href=".hd.html"class="back-btn">&lt;</a>
+        <div class="top-title">采摘文化体验流程</div>
+        <div class="kf-btn">联系客服</div>
+</div>
+<div class="first-box">
+    <div class="first-img">
+        <img src="picture/662.png">
+    </div>
+    <div class="text-wrapper">
+        <div class="first-title">签到入园</div>
+    <div class="first-title2">展示预约码，现场进行签到</div>
+    </div>
+    
+</div>
+<div class="second-box">
+<div class="text-wrapper">
+        <div class="first-title"style="left:50px;top:2px">非遗导览</div>
+    <div class="first-title2"style="left:30px">听传承人讲非遗种植史</div>
+ <div class="first-title2"style="left:20px">非遗技艺，参观古法制柑展示</div>
+
+    </div>
+</div>
+<div class="first-box">
+    <div class="first-img">
+        <img src="picture/662.png">
+    </div>
+    <div class="text-wrapper">
+        <div class="first-title"style="top:2px;">趣味采摘</div>
+    <div class="first-title2"style="left:-40px;top:5px">入园畅摘瓯柑，现摘现尝</div>
+<div class="first-title2"style="left:-30px;top:5px">体验田园采摘乐趣</div>
+</div>
+    </div>
+    <div class="second-box">
+<div class="text-wrapper">
+        <div class="first-title"style="left:50px;top:2px">文化手工</div>
+    <div class="first-title2"style="left:40px">体验柑皮画/香囊制作
+</div>
+ <div class="first-title2"style="left:40px">团队游戏：欧瑞吉闯关</div>
+
+    </div>
+</div>
+<div class="first-box">
+    <div class="first-img">
+        <img src="picture/662.png">
+    </div>
+    <div class="text-wrapper">
+        <div class="first-title"style="top:2px;">成果兑换</div>
+    <div class="first-title2"style="left:-40px;top:5px">瓯柑按重兑换普茶/文创</div>
+<div class="first-title2"style="left:-20px;top:5px">可现场加工...</div>
+</div>
+    </div>
+    <div class="divider"></div>
+    <div class="notice-title">预约须知</div>
+    <div class="notice-text">请至少提前 1 天预约，凭核销码签到入园,<br>
+爽约 3 次，将限制预约。<br>
+文明采摘，爱护果树与非遗设施，<br>
+遇极端天气可免费改期。</div>
+<div class="book-btn">立即预约</div>
+</div>
+
+    </div>
+</body>
+</html>
+   

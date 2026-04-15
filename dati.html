@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    知识答题
+</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .question-container{
+        width:393px;
+        height:852px;
+        background-color:#FAFAFA;
+        position:relative;
+        overflow:hidden;
+        display:flex;
+        flex-direction: column;
+    }
+    .top-nav{
+        width:100%;
+        height:160px;
+         background-color:#FFFFFF;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:0 15px;
+            margin: 0 auto; 
+            
+    }
+    .back-btn{
+        font-size:25px;
+            color:#000;
+            text-decoration: none;
+          width:25px;
+          margin-top:79px;
+    }
+    .page-title{
+        font-size:28px;
+            color:#000;
+            margin-top:79px;
+            flex:1;
+            margin-left:100px;
+    }
+    .question-infomation{
+        padding:16px;
+        border-radius: 8px;
+        width:98%;
+        height:95px;
+          background-color:#fff;
+          margin-top:10px;
+          margin-left:4px;
+    }
+    .remain-time{
+        display:flex;
+        justify-content:space-between;
+        font-size:16px;
+        color:#808080;
+        margin-bottom:8px;
+        
+      
+    }
+    .progress-bar{
+        width:100%;
+        height:8px;
+        background-color: #F1F1F1;
+        border-radius:10px;
+        overflow:hidden;
+    }
+    .progress-fill{
+        height:100%;
+        width:33%;
+        background-color:#0F81DB;
+    }
+    .question-scroll{
+        flex:1;
+        overflow-y: auto;
+        padding:15px;
+       
+    }
+    .question-number{
+        font-size:16px;
+        color:#7F7F7F;
+        margin-bottom:10px;
+    }
+    .question-item{
+        margin-bottom:25px;
+    }
+    .question-text{
+        font-size:16px;
+        color:#000;
+        margin-bottom:15px;
+        line-height:1.5;
+    }
+    .options-list{
+        display:flex;
+        overflow-y:auto;
+        padding:0 16px;
+        flex-direction: column;
+    }
+    .question-box{
+        background-color:#fff;
+        border-radius:8px;
+        width:100%;
+        margin-top:5px;
+    }
+    .option-item{
+        padding:12px 16px;
+        border-radius: 8px;
+        border:1px solid #909090;
+        font-size:16px;
+        cursor: pointer;
+        transition:all 0.2s;
+        margin-bottom:5px;
+    }
+    .option-item.selected{
+        background-color:#B3DDFF;
+        color:#fff;
+        border-color: #909090;
+    }
+    .submit-btn{
+        width:130px;
+        height:38px;
+        background-color: #5AAFF4;
+        border-radius: 8px;
+        border:none;
+        font-size:20px;
+        color:#fff;
+        font-weight:bold;
+        cursor:pointer;
+        text-align:center;
+        margin-left:35%;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    .submit-btn:disabled{
+        background-color:#ccc;
+        cursor:not-allowed;
+    }
+
+    </style>
+    </head>
+    <body>
+    <div class="question-container">
+            <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+            </div>
+            <div class="top-nav">
+                <a href="gushi.html"class="back-btn">&lt;</a>
+                <div class="page-title">知识答题</div>
+            </div>
+            <div class="question-infomation">
+                <div class="remain-time">
+                    <span>本周剩余次数</span>
+                    <span style="color:#0F80DB;font-weight:bold">1/3</span>
+                   
+                </div> 
+                <div class="remain-time">
+                    <span style="font-size:13px;color:#8F8F8F">一题8积分</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                
+            </div>
+            <div class="question-scroll">
+                <div class="question-number">1/5</div>
+                <div class="question-box">
+                    <div class="question-item">
+                        <div class="question-text">1.【历史文化】温州瓯柑在古代曾作为贡品，最早
+可追溯至哪个朝代？</div>
+                <div class="options-list">
+                  <div class="option-item"onclick="selectOption(this,1)">A唐朝</div>
+                    <div class="option-item"onclick="selectOption(this,1)">B宋朝</div>
+                    <div class="option-item"onclick="selectOption(this,1)">C明朝</div>
+                    <div class="option-item"onclick="selectOption(this,1)">D清朝</div>
+                </div>
+                    </div>
+
+                    <div class="question-item">
+                        <div class="question-text">2.【种植特色】瓯柑的独特微苦口感来源于哪种
+成分？</div>
+                <div class="options-list">
+                  <div class="option-item"onclick="selectOption(this,2)">A柠檬酸</div>
+                    <div class="option-item"onclick="selectOption(this,2)">B柚皮苷</div>
+                    <div class="option-item"onclick="selectOption(this,2)">C维生素C</div>
+                    <div class="option-item"onclick="selectOption(this,2)">D果糖</div>
+                </div>
+                    </div>
+
+                    <div class="question-item">
+                        <div class="question-text">3.【民俗文化】温州民间有“冬至吃瓯柑”的习俗，
+其寓意是什么？</div>
+                <div class="options-list">
+                  <div class="option-item"onclick="selectOption(this,3)">A驱寒保暖</div>
+                    <div class="option-item"onclick="selectOption(this,3)">B祈求来年丰收</div>
+                    <div class="option-item"onclick="selectOption(this,3)">C象征苦尽甘来</div>
+                    <div class="option-item"onclick="selectOption(this,3)">D纪念历史人物</div>
+                </div>
+                    </div>
+
+                     <div class="question-item">
+                        <div class="question-text">4.【生态种植】三垟湿地的瓯柑种植采用“鱼柑
+共生“模式，这种做法的核心目的是？</div>
+                <div class="options-list">
+                  <div class="option-item"onclick="selectOption(this,4)">A增加鱼类产量</div>
+                    <div class="option-item"onclick="selectOption(this,4)">B减少农药使用</div>
+                    <div class="option-item"onclick="selectOption(this,4)">C提升瓯柑甜度</div>
+                    <div class="option-item"onclick="selectOption(this,4)">D吸引游客参观</div>
+                </div>
+                    </div>
+
+                    <div class="question-item">
+                        <div class="question-text">5.【现代价值】瓯柑的果皮在传统加工中常被
+制成什么？</div>
+                <div class="options-list">
+                  <div class="option-item"onclick="selectOption(this,5)">A陈皮</div>
+                    <div class="option-item"onclick="selectOption(this,5)">B果酱</div>
+                    <div class="option-item"onclick="selectOption(this,5)">C精油</div>
+                    <div class="option-item"onclick="selectOption(this,5)">D发酵酒</div>
+                </div>
+                    </div>
+                </div>
+            </div>
+            <button class="submit-btn"onclick="submitQuiz()">提交答案</button>
+        </div>
+        <script>
+            const CORRECT_ANSERS={
+                1:'A唐朝',
+                2:'B柚皮苷',
+                3:'C象征苦尽甘来',
+                4:'B减少农药使用',
+                5:'A陈皮'
+            }
+            const selectedAnswers={
+                1:null,
+                2:null,
+                3:null,
+                4:null,
+                5:null,
+            };
+            function selectOption(optionEl,questionNum){
+                const siblings=optionEl.parentElement.children;
+                for(let i=0;i<siblings.length;i++){
+                    siblings[i].classList.remove('selected');
+                }
+                optionEl.classList.add('selected');
+                selectedAnswers[questionNum]=optionEl.textContent;
+            }
+            function submitQuiz(){
+                const allAnswered=Object.values(selectedAnswers).every(ans=>ans !==null);
+                if(!allAnswered){
+                    alert('请完成所有题目后再提交');
+                    return;
+                }
+                let correctCount=0;
+                for(let i=1;i<=5;i++){
+                    if (selectedAnswers[i]===CORRECT_ANSERS[i]){
+                        correctCount++;
+                    }
+                }
+                const totalScore=correctCount*8;
+                window.location.href=`tjjg.html?correct=${correctCount}&score=${totalScore}`;
+            }
+        </script>
+    </body>
+    </html>

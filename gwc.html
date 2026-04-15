@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    购物车
+</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    } 
+    
+     .main-container{
+        width:393px;
+        height:852px;
+        background-color: #F9F9F9;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        position:relative;
+    }
+    .top-container{
+        width:100%;
+        height:150px;
+        background-color: #fff;
+    }
+     .back-btn{
+        font-size:25px;
+            color:#000;
+            text-decoration: none;
+          width:50px;
+          position:absolute;
+          left:20px;
+          margin-top:80px;
+          z-index:10;
+    }
+    .page-title{
+        font-size:24px;
+            color:#000;
+            margin-top:80px;
+            flex:1;
+            width:100%;
+            
+            margin-left:20px;
+    }
+    .city-select-wrap{
+        background-color: #fff;
+        padding:15px 20px;
+        display:flex;
+        align-items: center;
+        gap:8px;
+    }
+    .city-icon{
+        width:20px;
+        height:20px;
+        top:15px;
+        
+    }
+   .city-select{
+    font-size:16px;
+    color:#717171;
+    background-color: transparent;
+    border:none;
+    outline:none;
+    
+   }
+   .goods-container{
+    background-color: #fff;
+    width:95%;
+    border-radius:6px;
+    margin:30px 15px;
+   }
+   .goods-title {
+            padding: 15px 20px;
+            font-size: 16px;
+            border-bottom: 2px solid #F9F9F9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .delete-btn {
+            font-size: 12px;
+            color: #FF8C00;
+            cursor: pointer;
+        }
+       
+        .goods-item {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #F9F9F9;
+        }
+        .goods-item:last-child {
+            border-bottom: none;
+        }
+        .radio-btn{
+        width:24px;
+        height:24px;
+        border-radius: 50%;
+        margin-right:10px;
+        border: 2px solid #ccc;
+        position:relative;
+        cursor: pointer;
+    }
+    .radio-btn.checked::after{
+        content:'';
+        position:absolute;
+        width:14px;
+        height:14px;
+        border-radius: 50%;
+        background:#ff4d4f;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+        .goods-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+            margin-right: 9px;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        .goods-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .goods-info {
+            flex: 1;
+        }
+        .goods-name {
+            font-size: 14px;
+            color:#000;
+            margin-bottom: 8px;
+            text-align:left;
+        }
+        .goods-name2 {
+            font-size: 14px;
+            color: #717171;
+            margin-bottom: 8px;
+             text-align:left;
+        }
+         .goods-price {
+            color: #FA662C;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-left:-140px;
+        }
+        .goods-count {
+            margin-left: 10px;
+            font-size: 16px;
+            color: #000;
+        }
+        .bottom-area {
+            width: 100%;
+            height: 70px;
+            position:absolute;
+            top:799px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+           
+        }
+        .price-info {
+            flex: 1;
+            font-size: 14px;
+            color: #737373;
+        }
+        .total-price {
+            color: #FA602C;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .discount-info {
+            font-size: 14px;
+            margin-top: 3px;
+        }
+        .js-btn {
+            width: 80px;
+            height: 40px;
+            background-color: #FF6E00;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+    <body>
+       
+         <div class="main-container">
+            <div class="top-container">
+                <div class="top-img">
+                 <img src="picture/Status bar.png"class="top-img">
+            </div>
+                 <a href="wd.html"class="back-btn">&lt;</a>
+            <div class="page-title">购物车</div>
+           
+             <div class="city-select-wrap">
+                 <div class="city-icon">
+                <img src="picture/map.png">
+            </div>
+                    <select class="city-select"id="citySelect">
+                        <option value="hangzhou">杭州市</option>
+                        <option value="hangzhou">温州市</option>
+                        <option value="hangzhou">上海市</option>
+                        <option value="hangzhou">北京市</option>
+                        <option value="hangzhou">深圳市</option>
+                    </select>
+                </div>
+
+                </div>
+               <div class="goods-container">
+                <div class="goods-title">
+                    <span>待结算商品</span>
+                    <span class="delete-btn"onclick="deleteSelected()">删除</span>
+                </div>
+                <div class="goods-item">
+                    <div class="radio-btn" onclick="toggleCheck(this)"></div>
+                    <div class="goods-img">
+                        <img src="picture/image80.png">
+                    </div>
+                    <div class="goods-info">
+                        <div class="goods-name">正宗温州三垟湿地瓯柑苦橘</div>
+                        <div class="goods-name2">净重（不含箱）:5斤;规格:中果</div>
+                        <div class="goods-name2">坏单包退 生鲜极速退</div>
+                        <div class="goods-price">￥67.5</div>
+                        
+                    </div>
+                    <div class="goods-count">x1</div>
+                </div>
+                <div class="goods-item">
+                    <div class="radio-btn"onclick="toggleCheck(this)">
+                        
+                    </div>
+                    <div class="goods-img">
+                        <img src="picture/image81.png">
+                    </div>
+                    <div class="goods-info">
+                        <div class="goods-name">浙江温州欧萌瓯柑汁饮品</div>
+                        <div class="goods-name2">252ML*6 100%瓯柑复合果汁</div>
+                        <div class="goods-name2">破损包退</div>
+                        <div class="goods-price">￥59.5</div>
+                        
+                    </div>
+                    <div class="goods-count">x1</div>
+                </div>
+               </div>
+             <div class="bottom-area">
+            <div class="radio-btn" onclick="toggleAllCheck(this)"id="allCheckBtn"></div>
+                <span style="margin-left:2px;margin-top:3px;">全选</span>
+                 <div class="price-info">
+            <span>运费：¥0，合计：<span class="total-price">¥127</span></span>
+            <div class="discount-info">已减：￥0，优惠明细 ></div>
+        </div>
+        <button class="js-btn">去结算</button>
+            </div>
+            
+           
+        </div>
+        
+    </div>
+<script>
+    function toggleCheck(btn){
+        btn.classList.toggle('checked');
+        checkAllStatus();
+        updateTotalPrice();
+    }
+    function checkAllStatus(){
+    const totalItems = document.querySelectorAll('.goods-item .radio-btn').length;
+    const checkedItems = document.querySelectorAll('.goods-item .radio-btn.checked').length;
+    const allCheckBtn = document.getElementById('allCheckBtn');
+    
+    if(totalItems === checkedItems){
+        allCheckBtn.classList.add('checked');
+    }else{
+        allCheckBtn.classList.remove('checked');
+    }
+}
+
+function deleteSelected(){
+    const checkedBtns = document.querySelectorAll('.goods-item .radio-btn.checked');
+    if(checkedBtns.length === 0){
+        alert('请选择要删除的商品！');
+        return;
+    }
+    checkedBtns.forEach(btn=>{
+        btn.closest('.goods-item').remove();
+    });
+    checkAllStatus();
+    updateTotalPrice();
+}
+
+
+function updateTotalPrice(){
+    const checkedItems = document.querySelectorAll('.goods-item .radio-btn.checked');
+    let total = 0;
+    checkedItems.forEach(item => {
+        const priceText = item.closest('.goods-item').querySelector('.goods-price').innerText;
+        const price = parseFloat(priceText.replace('￥', ''));
+        total += price;
+    });
+    
+    document.querySelector('.total-price').innerText = `¥${total.toFixed(1)}`;
+}
+</script>
+    </body>
+    </html>

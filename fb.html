@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    活动
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+        background-color:#ffffff;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        position:relative;
+        
+       
+    }
+    .back-btn{
+            position:absolute;
+            top:35px;
+            left:15px;
+            font-size:30px;
+            color:#000;
+            text-decoration:none;
+            z-index:20;
+        }
+        .fb-btn{
+            position:absolute;
+            top:80px;
+            left:280px;
+            background-color: #23B30A;
+            border-radius: 10px;
+            width:90px;
+            height:26px;
+            display:flex;
+            justify-content: center;
+            gap:2px;
+            align-items: center;
+            cursor: pointer;
+        }
+        .btn-title{
+            font-size:16px;
+            color:#fff;
+            line-height: 1;
+            display:flex;
+            align-items: center;
+            
+        }
+        .btn-title2{
+            font-size:11px;
+            color:#fff;
+             line-height: 1;
+            display:flex;
+            align-items: center;
+        }
+        .content{
+            padding:15px;
+        }
+        .input-content{
+            width:100%;
+            min-height: 80px;
+            padding:10px 0;
+            font-size:18px;
+            color:#8F8F8F;
+            border:none;
+            outline:none;
+            margin-bottom:5px;
+            margin-top:120px;
+            margin-left:30px;
+        }
+        .image-area{
+            display:flex;
+            gap:15px;
+            margin-bottom:30px;
+            padding:0 50px;
+        }
+        .upload-img{
+            width:120px;
+            height:116px;
+            display:block;
+            overflow: none;
+            position:relative;
+        }
+        .upload-img img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .upload-btn{
+            width:120px;
+            height:116px;
+            background-color:rgba(237,234,234,0.6);
+            cursor: pointer;
+            flex-direction: column;
+            align-items:center;
+            display:flex;
+            justify-content: center;
+
+        }
+        .upload-btn span{
+            font-size:40px;
+            color:#919191;
+            line-height:1;
+        }
+        .fileInput{
+            display:none;
+        }
+        .bottom{
+            margin-top: 20px;
+           
+            padding:0 15px;
+            position:relative;
+
+        }
+        
+     
+        .bottom-left{
+            
+            align-items: center;
+            gap:10px;
+            font-size:16px;
+            color:#000;
+            position:absolute;
+            margin-left:5px;
+            cursor: pointer;
+            
+        }
+        .bottom-right{
+            font-size:16px;
+            align-items: center;
+            gap:10px;
+           position:absolute;
+            margin-left:300px;
+            color:#6B6B6B;
+            cursor: pointer;
+        }
+         .bottom-left2{
+            
+            align-items: center;
+            gap:10px;
+            font-size:16px;
+            color:#000;
+            position:absolute;
+            margin-left:5px;
+            margin-top:50px;
+            cursor: pointer;
+        }
+        .bottom-right2{
+            font-size:16px;
+            align-items: center;
+            gap:10px;
+           position:absolute;
+            margin-left:300px;
+             margin-top:50px;
+             color:#6B6B6B;
+             cursor: pointer;
+        }
+        .line{
+            position:absolute;
+            top:-10px;
+            left:20px;
+            width:340px;
+            height:1px;
+            background-color: #B8B8B8;
+        }
+        .line2{
+            position:absolute;
+            top:40px;
+            left:20px;
+            width:340px;
+            height:1px;
+            background-color: #B8B8B8;
+        }
+          .line3{
+            position:absolute;
+            top:90px;
+            left:20px;
+            width:340px;
+            height:1px;
+            background-color: #B8B8B8;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="main-container">
+   <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+        </div>
+        <div class="back-btn">
+                <a href="shequ.html"class="back-btn">&lt;</a>
+                </div>
+                <div class="fb-btn">
+                    <span class="btn-title">
+                        发表 </span>
+                        <span class="btn-title2">+10积分</span>
+                </div>
+                <div class="content">
+                    <textarea class="input-content" placeholder="这一刻的想法..."></textarea>
+                </div>
+                <div class="image-area" id="imageArea">
+                    <div class="upload-img">
+                        <img src="picture/upload.png">
+                    </div>
+                    <label for="fileInput"class="upload-btn">
+                        <span>+</span>
+                    </label>
+                    <input type="file"id="fileInput"class="fileInput"accept="image/*"multiple>
+                </div>
+                <div class="bottom">
+                   <div class="line"></div>
+                   <div class="line2"></div>
+                   <div class="line3"></div>
+                        <div class="bottom-left">
+                            <img src="picture/pin.png" style="width:20px;height:20px;">
+                            <span>所在位置</span>
+                        </div>
+                        <div class="bottom-right">
+                            <span >></span>
+                        </div>
+                        
+                    
+
+                    
+                        <div class="bottom-left2">
+                            
+                            <img src="picture/person-1.png" style="width:20px;height:20px;">
+                            <span>谁可以看</span>
+                        </div>
+                        <div class="bottom-right2">
+                            <span>公开</span>
+                            <span >></span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+    </body>
+    <script>
+document.getElementById('fileInput').onchange = function(e) {
+    let file = this.files[0];  
+    if(!file) return;
+    
+    
+    let reader = new FileReader();
+    reader.onload = function(e) {
+        let firstImg = document.querySelector('.upload-img img');
+        if(firstImg) {
+            firstImg.src = e.target.result;  
+        }
+    }
+    reader.readAsDataURL(file);
+}
+
+</script>
+    </html>

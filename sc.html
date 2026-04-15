@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    商城
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+        background-color:#FBFBFB;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        position:relative;
+    }
+    .top-container{
+        background-color:#9C6D11;
+        padding:12px 12px;
+        width:100%;
+        height:170px;
+    }
+    .search-area{
+        padding:10px 20px;
+       
+        background-color: #fff;
+    }
+    .search-box{
+        width:90%;
+        height:31px;
+        border:0px;
+        border-radius:8px;
+        padding:0 16px;
+        font-size: 16px;
+        color:#B5B5B5;
+        background-color: #FFF;
+        outline:none;
+        margin-top:60px;
+        margin-left:10px;
+    }
+    .search-icon{
+        color:#B7B7B7;
+        font-size:15px;
+    }
+    .search-input{
+        flex:1;
+        font-size:16px;
+        color:#B5B5B5;
+        border:none;
+        outline:none;
+        margin-top:5px;
+    }
+    .search-input::placeholder{
+        color:#B5B5B5;
+       
+    }
+    .tab-nav{
+        margin-top:20px;
+        background-color: #9C6D11;
+        display:flex;
+        padding:2px 0;
+        
+    }
+    .tab-nav a{
+        text-decoration:none;
+    flex: 1;
+    display: block; 
+    
+    }
+    .tab-item{
+        flex:1;
+        text-align:center;
+        font-size:20px;
+        color:#fff;
+        
+    }
+    .tab-item.active{
+        color:#F7C200;
+    }
+    .help-tip{
+        width:100%;
+        height:35px;
+        font-size:13px;
+        color:#E60404;
+        background-color: #fff;
+        font-weight:bold;
+    }
+    .goods-container{
+        flex:1;
+        overflow-y: auto;
+        padding:10px 15px 80px;
+        background-color: #FBFBFB;
+    }
+    .goods-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:12px;
+        background-color: #fff;
+    }
+    .goods-card{
+        background-color: #fff;
+        border-radius: 8px;
+        overflow:hidden;
+
+    }
+    .goods-img{
+        width:178px;
+        height:158px;
+        object-fit:cover;
+    }
+    .goods-information{
+        padding:8px 8px;
+    }
+    .goods-title{
+        font-size:15px;
+        color:#000;
+        line-height:1.5;
+        
+       overflow:hidden;
+
+    }
+    .goods-score{
+        display:flex;
+        align-items:center;
+        margin-bottom:6px;
+        margin-top:5px;
+    }
+    .star{
+        color:#747474;
+        font-size:12px;
+        margin-left:5px;
+    }
+    .goods-price{
+        font-size:20px;
+        color:#FF8C00;
+        font-weight:bold;
+        margin-bottom:5px;
+    }
+    .buy-btn{
+        width:100px;
+        height:25px;
+        background-color:#F4810F;
+        color:#fff;
+        border-radius:10px;
+        font-size:15px;
+        cursor:pointer;
+        text-decoration:none;
+        border:none;
+        margin-left:10px;
+    }
+</style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+            </div>
+            <div class="top-container">
+                <div class="search-box">
+                    <input type="text"class="search-input"placeholder="🔍搜索">
+                </div>
+                <div class="tab-nav" style="text-decoration:none;">
+                <a href="sc.html"><div class="tab-item active">鲜果</div></a>
+                <a href="jgp.html"><div class="tab-item">加工品</div></a>
+                <a href="zhibo.html"><div class="tab-item">直播</div></a>
+            </div>
+            </div>
+            <div class="help-tip">
+                每买一份瓯柑，平台捐1元给柑农合作社！每买一份产品，获得50助农积分
+
+            </div>
+            <div class="goods-container">
+                <div class="goods-grid">
+                    <div class="goods-card">
+                        <img src="picture/image1.png"class="goods-img">
+                        <div class="goods-information">
+                            <div class="goods-title">正宗三垟湿地瓯柑</div>
+                            <div class="goods-score">
+                                <div class="star">⭐⭐⭐⭐⭐5.0</div>
+                            </div>
+                            <div class="goods-price">￥52.00</div>
+                            <button class="buy-btn"onclick="window.location.href='xqy.html'";>立即购买</button>
+                        </div>
+                    </div>
+
+                    <div class="goods-card">
+                        <img src="picture/image2.png"class="goods-img">
+                        <div class="goods-information">
+                            <div class="goods-title">浙江温州永嘉特产瓯柑</div>
+                            <div class="goods-score">
+                                <div class="star">⭐⭐⭐⭐4.0</div>
+                            </div>
+                            <div class="goods-price">￥56.00</div>
+                            <button class="buy-btn">立即购买</button>
+                        </div>
+                    </div>
+
+                       <div class="goods-card">
+                        <img src="picture/image3.png"class="goods-img">
+                        <div class="goods-information">
+                            <div class="goods-title">大果瓯柑苦橘温州特产
+                        </div>
+                            <div class="goods-score">
+                                <div class="star">⭐⭐⭐⭐⭐5.0</div>
+                            </div>
+                            <div class="goods-price">￥79.60</div>
+                            <button class="buy-btn">立即购买</button>
+                        </div>
+                    </div>
+
+                    <div class="goods-card">
+                        <img src="picture/image4.png"class="goods-img">
+                        <div class="goods-information">
+                            <div class="goods-title">正宗瓯柑温州苦橘苦柑
+                        </div>
+                            <div class="goods-score">
+                                <div class="star">⭐⭐⭐⭐⭐5.0</div>
+                            </div>
+                            <div class="goods-price">￥57.00</div>
+                            <button class="buy-btn">立即购买</button>
+                        </div>
+                    </div>
+                    
+                    <div class="goods-card">
+                        <img src="picture/image5.png"class="goods-img">
+                        <div class="goods-information">
+                            <div class="goods-title">温州瓯柑5斤正宗特产
+                        </div>
+                            <div class="goods-score">
+                                <div class="star">⭐⭐⭐⭐⭐5.0</div>
+                            </div>
+                            <div class="goods-price">￥38.87</div>
+                            <button class="buy-btn">立即购买</button>
+                        </div>
+                    </div>
+                    
+                    <div class="goods-card">
+                        <img src="picture/image6.png"class="goods-img">
+                        <div class="goods-information">
+                            <div class="goods-title">正宗瓯柑苦柑温州丽水
+                        </div>
+                            <div class="goods-score">
+                                <div class="star">⭐⭐⭐⭐⭐5.0</div>
+                            </div>
+                            <div class="goods-price">￥38.87</div>
+                            <button class="buy-btn">立即购买</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+
+
+
+            <div class="bottom-bar">
+                <div class="bottom-item ">
+                    <a href="shouye.html"> <img src="picture/home.png"></a>
+                    <span>首页</span>
+                </div>
+                <div class="bottom-item active">
+                    <a href="sc.html"><img src="picture/store2.png"></a>
+                    <span>商城</span>
+                </div>
+                <div class="bottom-item ">
+                    <a href="shequ.html"><img src="picture/community.png"></a>
+                    <span>社区</span>
+                </div><div class="bottom-item ">
+                   <a href="wd.html"><img src="picture/person.png"></a> 
+                    <span>我的</span>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    详情页
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+        background-color:#Fff;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        position:relative;
+    }
+    .top-nav{
+        position:absolute;
+        top:40px;
+        left:0;
+        right:0;
+        height:50px;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        z-index:10;
+        padding:0 20px;
+    }
+    .back-btn, .car-btn{
+        font-size:25px;
+        color:#fff;
+        text-decoration:none;
+        width:40px;
+        height:20px;
+        justify-content:center;
+        align-items:center;
+        display:flex;
+    }
+    .scroll-content{
+        width:100%;
+        height:100%;
+        padding-top:0px;
+        padding-bottom:80px;
+        overflow-y:auto;
+        -ms-overflow-style:none;
+        scrollbar-width:none;-ms-overflow-style: none; 
+        scrollbar-width: none;     
+    }
+
+    .scroll-content::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .lb-area{
+        width:100%;
+        height:313px;
+        position:relative;
+        overflow:hidden;
+        
+
+    }
+    .lb-list{
+        display:flex;
+        width:300%;
+        height:100%;
+        transition:transform 0.3s ease;
+    }
+    .lb-item{
+        width:100%;
+        height:100%;
+        flex-shrink:0;
+    }
+    .lb-item img{
+        width:393px;
+        height:313px;
+        object-fit:contain;
+        display:block;
+       
+        image-rendering: crisp-edges;
+        
+    }
+    
+    .next-btn{
+        position:absolute;
+        right:20px;
+        top: 50%;
+        transform:translateY(-50%);
+        width:44px;
+        height:44px;
+        color:#fff;
+        background-color:rgba(224,224,224,0.37);
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:20px;
+        cursor:pointer;
+        z-index:5;
+    }
+    .goods-information{
+        font-size:13px;
+        background-color:#fff;
+    }
+    .goods-title{
+        font-size:14px;
+        color:#000;
+        font-weight:bold;
+        margin-bottom:6px;
+        line-height:1.5;
+        margin-left:10px;
+    }
+    .goods-score{
+        display:flex;
+        align-items:center;
+        margin-bottom:6px;
+        font-size:14px;
+        margin-left:10px;
+    }
+    .goods-price{
+        display:flex;
+        align-items:baseline;
+        margin-bottom:6px;
+        margin-left:10px;
+    }
+    .price{
+        font-size:24px;
+        color:#E7482F;
+        font-weight:bold;
+    }
+    .price-sale{
+        font-size:10px;
+        color:#787878;
+        margin-left:250px;
+    }
+    .goods-box{
+        display:flex;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:8px;
+        margin-bottom:6px;
+        margin-left:10px;
+    }
+    .box-tag{
+        padding:5px 5px;
+        background-color: #EA5E49;
+        font-size:12px;
+        color:#fff;
+        border-radius:3px;
+    }
+    .goods-text{
+        font-size:13px;
+        color:#989898;
+        margin-bottom:10px;
+        margin-left:10px;
+
+    }
+    .recommend{
+        font-size:13px;
+        color:#000;
+        margin-left:10px;
+    }
+    .detail-img{
+        width:100%;
+        padding:10px 5px;
+        
+    }
+    .detail-img img{
+        width:100%;
+        height:auto;
+        margin-bottom:10px;
+    }
+    .bottom2-bar {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border-top: 3px solid #E4E4E4;
+    display: flex;          
+    justify-content: space-around; 
+    align-items: center;    
+    position: absolute;     
+    bottom: 0;              
+    left: 0;
+    z-index: 100;
+    flex-shrink: 0;        
+    padding:5px 0;
+}
+.bar-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:#000;
+    font-size:13px;
+    cursor:pointer;
+}
+.bar-item img{
+    width:24px;
+    height:24px;
+    margin-bottom:5px;
+}
+
+.bar-btn{
+    
+    height:34px;
+    width:90px;
+    border-radius: 50px;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    
+}
+.car2-btn{
+    background-color:#F88B38;
+    font-size:13px;
+    padding:3px;
+  
+}
+.buy-btn{
+    background-color:#F88B38;
+    font-size:13px;
+}
+    </style>
+    </head>
+    <body>
+        <div class="main-container">
+        <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+            </div>
+            
+            <div class="scroll-content">
+                <div class="lb-area">
+                    <div class="top-nav">
+                <a href="sc.html"class="back-btn">&lt;</a>
+                <a href="car.html"class="car-btn">
+                    <img src="picture/shopping-cart.png"style="width:24px;height:24px;">
+                </a>
+            </div>
+                    <div class="lb-list"id="lbList">
+                        <div class="lb-item">
+                            <img src="picture/image7.png">
+                        </div>
+                        <div class="lb-item">
+                            <img src="picture/image8.png">
+                        </div>
+                        <div class="lb-item">
+                            <img src="picture/image9.png">
+                        </div>
+                    </div>
+                    <div class="next-btn"id="nextBtn">></div>
+                </div>
+                <div class="goods-information">
+                    <div class="goods-title">正宗温州三垟湿地瓯柑三洋苦橘不上火柑橘过年送
+礼佳品味甜特产</div>
+<div class="goods-score">
+    <span class="star">⭐⭐⭐⭐⭐</span>
+    <span class="score-text">4.8分</span>
+</div>
+<div class="goods-price">
+    <span class="price">￥52起</span>
+    <span class="price-sale">已售100+</span>
+</div>
+<div class="goods-box">
+    <span class="box-tag">5折|￥10.4/斤</span>
+</div>
+<div class="goods-text">
+    店铺橘子热销第一名，正宗三垟湿地瓯柑，味甜不上火更健康
+</div>
+<div class="recommend">
+    👍  90%
+</div>
+<div class="detail-img">
+    <img src="picture/imge20.png">
+    <img src="picture/image41.png">
+    <img src="picture/image42.png">
+    <img src="picture/image43.png">
+</div>
+                </div>
+                <div class="bottom2-bar">
+                    <div class="bar-item">
+                        <img src="picture/dianpu.png">
+                        <span>店铺</span>
+                    </div>
+                    <div class="bar-item">
+                        <img src="picture/kf.png">
+                        <span>客服</span>
+                    </div>
+                    <div class="bar-item"id="collectBtn">
+                        <img src="picture/sc.png"id="collectIcon">
+                        <span>收藏</span>
+                    </div>
+                    <button class="bar-btn car2-btn"onclick="window.location.href='jrgwc.html'";>加入购物车</button>
+                    <button class="bar-btn buy-btn"onclick="window.location.href='ljgm.html'";>立即购买</button>
+                </div>
+                
+            </div>
+       
+        
+        
+        
+        
+        
+        
+        </div>
+        
+                 <script>
+                    const lbList=document.getElementById('lbList');
+                    const nextBtn=document.getElementById('nextBtn')
+                    let currentIndex=0;
+                    const total=3;
+                    nextBtn.addEventListener('click',function(){
+                        currentIndex=(currentIndex+1)%total;
+                        lbList.style.transform=`translateX(-${currentIndex * 100}%)`;
+                    });
+                const collectBtn=document.getElementById('collectBtn');
+                const collectIcon=document.getElementById('collectIcon');
+                let isCollected=false;
+                const starNormal = 'picture/sc.png'; 
+        const starActive = 'picture/xx2.png'; 
+        collectBtn.addEventListener('click', function() {
+            isCollected = !isCollected; 
+            if (isCollected) {
+                collectIcon.src = starActive;
+            } else {
+                collectIcon.src = starNormal;
+                
+            }
+        });
+        </script>
+    </body>
+    </html>

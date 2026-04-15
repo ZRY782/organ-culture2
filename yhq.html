@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    券包
+</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    } 
+    .main-container{
+        width:393px;
+        height:852px;
+        background-color: #F9F9F9;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        position:relative;
+    }
+    .top-container{
+        width:100%;
+        height:180px;
+        background-color: #fff;
+    }
+     .back-btn{
+        font-size:25px;
+            color:#000;
+            text-decoration: none;
+          width:50px;
+          position:absolute;
+          left:20px;
+          margin-top:80px;
+          z-index:10;
+    }
+    .page-title{
+        font-size:24px;
+            color:#000;
+            margin-top:80px;
+            flex:1;
+            width:100%;
+            
+            margin-left:20px;
+    }
+    .tab-bar{
+        width:100%;
+        display:flex;
+        justify-content: space-around;
+        background-color: #fff;
+        padding:30px 0 10px 0;
+    }
+    .tab-item{
+        font-size:16px;
+        color:#000;
+        padding:5px 0;
+        cursor:pointer;
+    }
+    .tab-item.active{
+        color:#FB3F3F;
+        border-bottom:3px solid #FB3F3F;
+        font-weight:bold;
+    }
+    .white-box{
+        width:95%;
+        height:108px;
+        margin-top:20px;
+        background-color: #fff;
+        border-radius: 3px;
+       position:relative;
+       padding:20px 5px  20px 30px;
+       text-align:left;
+    }
+ .new-tag{
+    position:absolute;
+    top:0px;
+    left:0px;
+    position:absolute;
+    z-index:10;
+ }
+ .tag-title{
+    font-size:10px;
+    color:#fff;
+    position:absolute;
+    z-index:30;
+    top:25px;
+    left:3px;
+    transform: rotate(-47.81deg);
+            transform-origin: left top;
+ }
+   .price-left{
+    font-size:20px;
+    color:#FF0D0D;
+    
+    margin-top:10px;
+    display:inline-block;
+    font-weight: bold;
+   }
+   .price-right{
+    font-size:32px;
+    color:#FF0D0D;
+    margin-left:-5px;
+    display:inline-block;
+    font-weight: bold;
+   }
+   .price-bottom{
+    font-size:16px;
+    color:#D70606;
+    margin-top:2px;
+    margin-left:10px;
+    font-weight: bold;
+   }
+   .right-text{
+     font-size:16px;
+    color:#000;
+   margin-top:-65px;
+    margin-left:70px;
+    text-align:left;
+   }
+   .right-text1{
+    font-size:12px;
+    color:#D00505;
+    margin-top:5px;
+    margin-left:70px;
+    text-align:left;
+    
+   }
+.sy-btn{
+        width:67px;
+        height:26px;
+        border-radius:3px ;
+        background-color: #CD0C0C;
+        color:#fff;
+        font-size:14px;
+        text-align: center;
+        align-items: center;
+        line-height:26px;
+        text-align:center;
+        margin-top:-40px;
+        margin-left:260px;
+        cursor: pointer;
+    }
+    </style>
+    </head>
+    <body>
+         <div class="main-container">
+            <div class="top-container">
+                <div class="top-img">
+                 <img src="picture/Status bar.png"class="top-img">
+            </div>
+                 <a href="wd.html"class="back-btn">&lt;</a>
+            <div class="page-title">我的优惠券</div>
+            <div class="tab-bar">
+                <div class="tab-item active">未使用</div>
+                <div class="tab-item">已使用</div>
+                <div class="tab-item">已过期/失效</div>
+            </div>
+            </div>
+               <div class="white-box">
+                <div class="new-tag">
+                    <img src="picture/Vector1.png">
+                    <div class="tag-title">新获得</div>
+                </div>
+                <div class="price-left">￥</div>
+                <div class="price-right">10</div>
+                <div class="price-bottom">无门槛</div>
+                <div class="right-text">积分兑换获得，仅限瓯柑<br>商城使用 </div>
+                <div class="right-text1">有限期至2026-12.31</div>
+                <div class="sy-btn">立即使用</div>
+
+               </div>
+                <div class="white-box">
+               
+                <div class="price-left">￥</div>
+                <div class="price-right">10</div>
+                <div class="price-bottom">无门槛</div>
+                <div class="right-text">积分兑换获得，仅限瓯柑<br>商城使用 </div>
+                <div class="right-text1">有限期至2026-12.31</div>
+                <div class="sy-btn">立即使用</div>
+
+               </div>
+                </div>
+               
+            
+
+
+
+
+    </body>
+    </html>

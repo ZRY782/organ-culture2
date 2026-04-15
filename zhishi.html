@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    瓯柑知识全知道
+</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .knowledge-container{
+        width:393px;
+        height:852px;
+        background:linear-gradient(to bottom,#ff8b32 0%,#ff8b32 20%,#feb37b 30%,#ffcba3 40%,#f4f4f4 50%,#f4f4f4 100%);
+        overflow:hidden;
+        position:relative;
+       display:flex;
+       flex-direction:column;
+    }
+    .scroll-content{
+        width:100%;
+        flex:1;
+        height:100%;
+        overflow-y: auto;
+        padding-bottom:5px;
+        scrollbar-width: none;/*火狐隐藏滑动条*/
+        -ms-overflow-style: none;/*IE,EDGE隐藏*/
+        display:flex;
+        flex-direction: column;
+    }
+    .scroll-content::-webkit-scrollbar{/*chrome隐藏*/
+        display:none;
+    }
+    .top-img{
+        position: absolute;
+        top:0;
+        left:0;
+        width:402px;
+        height:62px;
+        z-index:10;
+    }
+    .top-nav{
+        width:100%;
+        height:60px;
+        display:flex;
+        align-items:center;
+        padding:0 16px;
+       /* position:sticky;
+        top:0px;*/
+        z-index:30;
+        margin-top:80px;
+    }
+    .back-btn{
+        color:#fff;
+        font-size: 25px;
+        text-decoration: none;
+        margin-right:20px;
+    }
+    .nav-title{
+        color:#fff;
+        font-size:28px;
+        font-weight:bold;
+        margin:0 auto;
+        position:relative;
+        left:-10px;
+    }
+    .tab-area{
+        width:100%;
+        height:80px;
+        background-color: #fff;
+        margin-top:20px;
+        display:flex;
+        text-decoration: none;
+    }
+    .tab-btn{
+        flex:1;
+        display:flex;
+        justify-content: center;/*水平对其*/
+        align-items: center;/*垂直对齐*/
+        font-size:17px;
+        color:#A8A8A8;
+        height:100%;
+       text-decoration: none;
+    }
+    
+    .tab-btn.active{
+        color:#000;
+        border-bottom:3px solid #DF6406;
+
+    }
+    .history-area{
+        width:100%;
+        padding:16px;
+        margin:10px 0 0 0 ;
+    }
+    .history-img{
+        width:100%;
+        margin-bottom:5px;
+    }
+    .history-img img{
+        width:100%;
+        border-radius:8px;
+    }
+   .history-text{
+    font-size:16px;
+    font-weight: bold;
+    left:0;
+    margin:-10px 0 10px 0;
+    color:#fff;
+   }
+   .content-white-box{
+    width:95%;
+    margin:-5px auto 15px auto;
+    padding:10px;
+    background-color: #fff;
+   }
+   .content-white-box:last-child{
+    margin-bottom:0px;
+   }
+   .section-title{
+    font-size:17px;
+    color:#000;
+    
+    margin:0 0 10px 0;
+   }
+   .two-card{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding:0 11px;
+   }
+   .two-card2{
+    width:152px;
+    height:140px;
+    background-color: #F6F6F3;
+    border-radius: 10px;
+    text-align: center;
+   }
+   .three-col{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+   }
+   .three-col-card{
+    width:31%;
+    height:87px;
+    
+    background-color: #FCF2EB;
+    padding:15px 15px;
+    border-radius: 10px;
+    text-align: center;
+   }
+   .card-icon{
+    margin-bottom:5px;
+    margin-top:5px;
+   }
+   .card-title{
+    font-size:15px;
+    font-weight: bold;
+    color:#000;
+    margin-bottom: 5px;
+   }
+   .card-title2{
+    font-size:12px;
+    color:#000;
+    line-height:22px;
+   }
+   .demo-area{
+    width:100%;
+    height:100px;
+    margin-top:10px;
+    text-align:center;
+   }
+   .demo-area img{
+    width:98%;
+   }
+   </style>
+  
+   <body>
+    <div class="knowledge-container">
+        <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+        </div>
+        <div class="scroll-content">
+            <div class="top-nav">
+                <a href="shouye.html"class="back-btn">&lt;</a>
+                <div class="nav-title">瓯柑知识全知道</div>
+            </div>
+            <div class="tab-area">
+                <div class="tab-btn active">种植指南</div>
+                <a href="yyjg.html" class="tab-btn">营养加工</a>
+            </div>
+            <div class="history-area">
+                <div class="history-img">
+                   <div class="history-text">千年瓯柑种植史</div>
+                    <img src="picture/lishi.png">
+                </div>
+            </div>
+            <div class="content-white-box">
+                <div class="section-title">核心种植技术</div>
+                <div class="two-card">
+                <div class="two-card2">
+                    <div class="card-icon">
+                        <img src="picture/scissors.png">
+                    </div>
+                    <div class="card-title">修建三季法</div>
+                    <div class="card-title2">春剪定型<br>夏剪蔬果<br>秋剪密枝</div>
+                </div>
+                <div class="two-card2">
+                    <div class="card-icon">
+                        <img src="picture/bug.png">
+                    </div>
+                    <div class="card-title">病虫害防治</div>
+                    <div class="card-title2">红蜘蛛/潜夜蛾<br>生物防治方案</div>
+                </div>
+            </div>
+            </div>
+           <div class="content-white-box">
+    <div class="section-title">温州水土适配术</div>
+    <div class="three-col">
+        <div class="three-col-card">
+            <div class="card-icon">
+                <img src="picture/motain.png">
+            </div>
+            <div class="card-title">地形选择</div>
+        </div>
+        <div class="three-col-card">
+            <div class="card-icon">
+                <img src="picture/snow.png">
+            </div>
+            <div class="card-title">防寒技巧</div>
+        </div>
+        <div class="three-col-card">
+            <div class="card-icon">
+                <img src="picture/tudi.png">
+            </div>
+            <div class="card-title">土地改良</div>
+        </div>
+    </div>
+</div>
+
+    <div class="content-white-box">
+        <div class="demo-area">   
+            <img src="picture/Frame9.png">
+        </div>
+    </div>
+    </div>
+        </div>
+            
+    </div>
+   </body>

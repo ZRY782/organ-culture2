@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    登录
+</title>
+<style>
+    body{
+        margin:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+        background-color: #f0f0f0;
+    }
+    .top-img{
+        position: absolute;
+        top:0;
+        left:0;
+        width:402px;
+        height:62px;
+    }
+    .login-box{
+        width:393px;
+        height:852px;
+        background:url('picture/bg2.jpg');
+        background-size:cover;
+        background-position:center;
+        position:relative;
+    }
+     .register-link{
+       text-align:center;
+       position:absolute;
+       top:540px;
+       left:115px;
+        font-size:16px;
+    }
+    .register-link a{
+        color:#FF8C00;
+        text-decoration: none;
+    }
+    .white-box{
+        width:393px;
+        height:629px;
+        background-color: #fff;
+        border-radius: 24px 24px 0px 0px;
+        position: absolute;
+        top:223px;
+        left:0px;
+        padding:50px 30px;
+        box-sizing:border-box;
+        color:#000;
+    }
+   
+    .title-text{
+        font-size:24px;
+        color:#000;
+        position:absolute;
+       top:158px;
+       left:101px;
+       z-index:20;
+    }
+    .input-item{
+        display:flex;
+        align-items:center;
+        margin-bottom:20px;
+        border:1px solid #636363;
+        border-radius: 11px;
+        padding:0 15px;
+        height:60px;
+    }
+    .input-icon{
+        width:20px;
+        height:25px;
+        margin-right:12px;
+    }
+    .input-item input{
+        flex:1;
+        border:none;
+        outline:none;
+        font-size:20px;
+        color:#848484;
+        background:transparent;
+    }
+    .eye-icon{
+        width:25px;
+        height:20px;
+        cursor:pointer;
+    }
+    .forget-pwd{
+        text-align:right;
+        margin-bottom:30px;
+        font-size: 17px;
+        
+    }
+    .forget-pwd a{
+        color:#FF8C00;
+        text-decoration: none;
+    }
+    .login-btn{
+        width:80%;
+        height:50px;
+        background-color: #FF8C00;
+        color:#fff;
+        border:none;
+        border-radius: 8px;
+        position:absolute;
+        top:477px;
+        left:40px;   
+         z-index:30;
+        font-size:16px;
+        font-weight:bold;
+        margin-top:40px 0 20px;
+    
+       
+    }
+  
+    .register-link{
+        text-align:center;
+        font-size:14px;
+        color:#000;
+        margin-bottom:120px;
+    }
+    .register-link a{
+       color:#FF8C00;
+       text-decoration: none;
+    }
+    .bottom-login{
+        display:flex;
+        justify-content: center;
+        gap:40px;
+        position: absolute;
+        bottom:100px;
+        left:0;
+        right:0;
+    }
+    .bottom-icon{
+        width:24px;
+        height:24px;
+    }
+</style>
+</head>
+<body>
+     
+    <div class="login-box">
+        <img src="picture/Status bar.png"class="top-img">
+              <div class="title-text">您好，欢迎登录！</div>
+       
+        <div class="white-box">
+            
+            <div class="input-item">
+                <img src="picture/phone.png"class="input-icon"alt="手机图标">
+                <input type="tel" placeholder="请输入手机号">
+            </div>
+    <div class="input-item">
+         <img src="picture/lock.png"class="input-icon"alt="锁图标">
+         <input type="password" placeholder="请输入密码">
+         <img src="picture/eye.png"class="input-icon"alt="显示密码">
+        
+    </div>
+    <div class="forget-pwd">
+       <a href="#">忘记密码？</a>
+    </div>
+  
+        </div> 
+       
+         <button class="login-btn"onclick="window.location.href='shouye.html'">立即登录</button>
+    <div class="register-link"> 还没有账号？<a href="zhuce.html">立即注册</a></div>
+        </div>
+        <div class="bottom-login">
+            <img src="picture/bird.png" class="bottom-icon"alt="鸟">
+             <img src="picture/apple.png" class="bottom-icon"alt="苹果">
+              <img src="picture/leaf.png" class="bottom-icon"alt="叶子">
+        </div>
+</body>
+</html>

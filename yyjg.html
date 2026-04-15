@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>营养加工</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            font-family: "微软雅黑", sans-serif;
+        }
+        
+        .page-container {
+            width: 393px;
+            height: 852px;
+            background-color:#FAFAFA;
+            position:relative;
+            overflow: hidden;
+        }
+        .top-orange-bar{
+            width:100%;
+            height:140px;
+            background-color: #F88B38;
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:1;
+        }
+    .top-nav{
+        width:100%;
+        height:60px;
+        display:flex;
+        align-items:center;
+        padding:0 16px;
+      
+        z-index:30;
+        margin-top:78px;
+    }
+    .back-btn{
+        color:#fff;
+        font-size: 25px;
+        text-decoration: none;
+        margin-right:20px;
+    }
+    .nav-title{
+        color:#fff;
+        font-size:28px;
+        font-weight:bold;
+        margin:0 auto ;
+        position:relative;
+        left:-20px;
+    }
+    .tab-area{
+        width:100%;
+        height:25px;
+        background-color: #fff;
+        margin-top:10px;
+        display:flex;
+        text-decoration: none;
+    }
+    .tab-btn{
+        flex:1;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size:17px;
+        color:#8A8A8A;
+        height:100%;
+       text-decoration: none;
+    }
+    
+    .tab-btn.active{
+        color:#000;
+        border-bottom:3px solid #DF6406;
+    }
+   
+    .white-box{
+        width:88%;
+        background-color:#fff;
+        border-radius: 8px;
+        padding:15px;
+        margin:0 auto 10px auto;
+    }
+    .nutri-box{
+        width:95%;
+        height:45px;
+        background: linear-gradient(to right, #FF9B4F, #FFCBAD);
+        border-radius:5px;
+        margin:10px;
+        display:flex;
+        align-items:center;
+       
+    }
+    .nutri-title{
+        font-size:16px;
+        font-weight:bold;
+        color:#fff;
+        margin-bottom:10px;
+        text-align:left;
+        height:auto;
+        margin:2px;
+    }
+    .nutri-grid{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:10px;
+        padding:0 19px;
+        margin-bottom:15px;
+    }
+    .nutri-card{
+        background-color: #fff;
+        border-radius: 8px;
+        text-align:center;
+        padding:12px;
+    }
+    .nutri-icon{
+        font-size:16px;
+        margin-bottom:5px;
+        font-weight: bold;
+    }
+    .nutri-card-title{
+        font-size:14px;
+        margin-bottom:4px;
+        font-weight:bold;
+    }
+    
+    .nutri-card .desc{
+        font-size:10px;
+        color:#000;
+        font-weight: bold;
+        
+    }
+   .content-scroll {
+            width: 100%;
+            position: absolute;
+            top: 175px;  
+            bottom: 0;
+            left: 0;
+            overflow-y: auto;  
+            z-index: 5;
+            padding-bottom: 15px;
+            scrollbar-width: none;  
+            -ms-overflow-style: none;  
+        }
+        
+        .content-scroll::-webkit-scrollbar {
+            display: none;
+        }
+    .process-title-bar{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        margin-bottom:10px;
+    }
+    .process-title{
+        font-size:16px;
+        font-weight:bold;
+        color:#000;
+    }
+    .arrow-icon{
+        font-size:16px;
+        color:#8A8A8A;
+    }
+    .process-step{
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:10px;
+    }
+    .main-step-img{
+        grid-column:1/2;
+        grid-row:1/3;
+        text-align:center;
+    }
+    
+    .step-item{
+        text-align:center;
+    }
+    .step-icon{
+        width:50px;
+        height:50px;
+        border-radius:50%;
+        margin:0 auto 5px auto;
+        align-items:center;
+        overflow:hidden;
+    }
+    .step-icon img{
+        width:50px;
+        height:50px;
+        object-fit:contain;
+    }
+    .step-text{
+        font-size:14px;
+        color:#000;
+    }
+    .eat-title{
+        font-size:16px;
+        font-weight:bold;
+        color:#000;
+        margin-bottom:5px;
+    }
+    .eat-grid{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:10px;
+    }
+    .eat-card{
+        text-align:center;
+    }
+    .eat-card-img{
+        width:70px;
+        height:70px;
+        margin-bottom:5px;
+    }
+    .eat-text{
+        font-size:14px;
+        color:#000;
+    }
+  
+    </style>
+</head>
+<body>
+    <div class="page-container">
+       <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+        </div>
+        <div class="top-orange-bar">
+            <div class="top-nav">
+                <a href="shouye.html"class="back-btn">&lt;</a>
+                <div class="nav-title">瓯柑知识全知道</div>
+            </div>
+            <div class="tab-area">
+                <a href="zhishi.html" class="tab-btn">种植指南</a> 
+                <div class="tab-btn active">营养加工</div>
+            </div>
+            
+            </div>
+        
+        
+        <div class="content-scroll">
+            <div class="nutri-box">
+            <div class="nutri-title">一颗果子的营养密码</div>
+        </div>
+        <div class="nutri-grid">
+            <div class="nutri-card">
+                <div class="nutri-icon">🔥热量</div>
+                <div class="nutri-card-title">43-48kcal</div>
+                <div class="desc">低卡路里<br>控制体重友好</div>
+            </div>
+            <div class="nutri-card">
+                <div class="nutri-icon">🍊维生素C</div>
+                <div class="nutri-card-title">28-35mg</div>
+                <div class="desc">增强免疫力<br>每日需求量的40%</div>
+        </div>
+        <div class="nutri-card">
+                <div class="nutri-icon">🌾膳食纤维</div>
+                <div class="nutri-card-title">1.8-2.3g</div>
+                <div class="desc">缓解便秘<br>促进肠道蠕动</div>
+        </div>
+          <div class="nutri-card">
+                <div class="nutri-icon">🥕胡萝卜素</div>
+                <div class="nutri-card-title">120-150μg</div>
+                <div class="desc">护眼<br>抗氧化</div>
+        </div>
+          <div class="nutri-card">
+                <div class="nutri-icon">⚡钾</div>
+                <div class="nutri-card-title">150-180mg</div>
+                <div class="desc">润肺止咳<br>补中益气</div>
+        </div>
+         <div class="nutri-card">
+                <div class="nutri-icon">🟡总黄酮</div>
+                <div class="nutri-card-title">>=60mg</div>
+                <div class="desc">润独特成分<br>抗炎抑菌</div>
+        </div>
+        </div>
+        
+        <div class="white-box">
+            <div class="process-title-bar">
+                <div class="process-title">瓯柑饼制作</div>
+                <div class="arrow-icon">></div>
+            </div>
+            <div class="process-step">
+                <div class="main-step-img">
+                    <img src="picture/image14.png">
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <img src="picture/image15.png">
+                    </div>
+                    <div class="step-text">采摘</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <img src="picture/image16.png">
+                    </div>
+                    <div class="step-text">浸洗</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <img src="picture/image17.png">
+                    </div>
+                    <div class="step-text">压饼</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <img src="picture/image18.png">
+                    </div>
+                    <div class="step-text">加糖</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <img src="picture/image19.png">
+                    </div>
+                    <div class="step-text">慢熬</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <img src="picture/image20.png">
+                    </div>
+                    <div class="step-text">完成</div>
+                </div>
+            </div>
+        </div>
+        <div class="white-box">
+            <div class="eat-title">创新吃法</div>
+            <div class="eat-grid">
+                <div class="eat-card">
+                    <img src="picture/image21.png">
+                    <div class="eat-text">瓯柑饮品</div>
+                </div>
+                <div class="eat-card">
+                    <img src="picture/image22.png">
+                    <div class="eat-text">柑儿文</div>
+                </div>
+                <div class="eat-card">
+                    <img src="picture/image23.png">
+                    <div class="eat-text">瓯柑爽口条</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+    </div>
+</body>
+</html>

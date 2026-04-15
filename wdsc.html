@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    我的收藏
+</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    } 
+    .main-container{
+        width:393px;
+        height:852px;
+        background-color: #F9F9F9;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        position:relative;
+    }
+    .top-container{
+        width:100%;
+        height:130px;
+        background-color: #fff;
+    }
+     .back-btn{
+        font-size:25px;
+            color:#000;
+            text-decoration: none;
+          width:50px;
+          position:absolute;
+          left:20px;
+          margin-top:80px;
+          z-index:10;
+    }
+    .page-title{
+        font-size:24px;
+            color:#000;
+            margin-top:80px;
+            flex:1;
+            width:100%;
+            
+            margin-left:30px;
+    }
+    .white-box{
+        width:90%;
+        height:300px;
+        margin-top:20px;
+        background-color: #fff;
+        border-radius: 6px;
+       position:relative;
+    }
+    .delete-btn{
+        width:38px;
+        height:21px;
+        background-color: #fff;
+        color:#F88B38;
+        top:10px;
+        right:10px;
+        position:absolute;
+        cursor: pointer;
+    }
+    .item-box{
+        display:flex;
+        align-items: center;
+        padding:10px;
+        border-bottom:2px solid #F9F9F9;
+    }
+   
+    .item-img{
+        width:80px;
+        height:80px;
+        border-radius: 5px;
+        object-fit: cover;
+        margin-right:10px;
+    }
+    .radio-btn{
+        width:24px;
+        height:24px;
+        border-radius: 50%;
+        margin-right:10px;
+        border: 2px solid #ccc;
+        position:relative;
+        cursor: pointer;
+    }
+    .radio-btn.checked::after{
+        content:'';
+        position:absolute;
+        width:14px;
+        height:14px;
+        border-radius: 50%;
+        background:#ff4d4f;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .item-content{
+        flex:1;
+        text-align:left;
+        margin-top:20px;
+    }
+    .item-title{
+        font-size:14px;
+        color:#000;
+        margin-bottom:5px;
+        font-weight:bold;
+    }
+    .item-text{
+        font-size:14px;
+        color:#717171;
+        margin-bottom:5px;
+        
+    }
+    .item-price{
+        font-size:16px;
+        color:#FA662C;
+        font-weight:bold;
+        
+    }
+  
+.jj-btn{
+        width:67px;
+        height:26px;
+        border-radius:6px ;
+        background-color: #F88B38;
+        color:#fff;
+        font-size:14px;
+        text-align: center;
+        align-items: center;
+        line-height:26px;
+        text-align:center;
+        margin-top:-15px;
+        margin-left:140px;
+        cursor: pointer;
+    }
+    </style>
+    </head>
+    <body>
+         <div class="main-container">
+            <div class="top-container">
+                <div class="top-img">
+                 <img src="picture/Status bar.png"class="top-img">
+            </div>
+                 <a href="wd.html"class="back-btn">&lt;</a>
+            <div class="page-title">我的收藏（2）</div>
+            </div>
+               <div class="white-box"id="collectionList">
+                <div class="delete-btn" onclick="deleteSelected()">删除</div>
+                <div class="item-box">
+                    
+                <div class="radio-btn" onclick="toggleCheck(this)"></div>
+                <img src="picture/image80.png"class="item-img">
+                <div class="item-content">
+                    <div class="item-title">正宗温州三垟湿地瓯柑苦橘</div>
+                    <div class="item-text">净重（不含箱）:5斤;规格: 中果</div>
+                    <div class="item-text">坏单包退 生鲜极速退</div>
+                    <div class="item-price">￥67.5</div>
+                    <div class="jj-btn">降价提醒</div>
+                </div>
+
+                </div>
+                  <div class="item-box"style="border:none">
+                    
+                <div class="radio-btn" onclick="toggleCheck(this)"></div>
+                <img src="picture/image81.png"class="item-img">
+                <div class="item-content">
+                    <div class="item-title">浙江温州欧萌瓯柑汁饮品</div>
+                    <div class="item-text">252ML*6 100%瓯柑复合果汁</div>
+                    <div class="item-text">破损包退</div>
+                    <div class="item-price">￥59.5</div>
+                    <div class="jj-btn">降价提醒</div>
+                </div>
+
+                </div>
+               </div>
+            
+</div>
+<script>
+    function toggleCheck(btn){
+        btn.classList.toggle('checked');
+    }
+    function deleteSelected(){
+        const checkedBtns=document.querySelectorAll('.radio-btn.checked');
+        if(checkedBtns.length===0){
+            alert('请选择要删除的商品！');
+            return;
+        }
+        checkedBtns.forEach(btn=>{
+            btn.closest('.item-box').remove();
+        });
+        updateCollectionCount();
+    }
+    function updateCollectionCount(){
+        const itemCount=document.querySelectorAll('.item-box').length;
+        document.querySelector('.page-title').innerText=`我的收藏（${itemCount})`;
+    }
+</script>
+
+
+
+
+
+    </body>
+    </html>

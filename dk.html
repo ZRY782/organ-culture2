@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    打卡
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+        background-color:#FAFAFA;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        position:relative;
+        
+       
+    }
+    .top-container{
+        background-color:#fff;
+        padding-top:50px;
+        padding-left:3px;
+        width:100%;
+        height:133px;
+        position:absolute;
+        z-index:1;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom:2px solid #B9B9B9;
+        
+    }
+     .top-title{
+        display:flex;
+        gap:30px;
+        color:#000;
+        font-size:24px;
+        justify-content: center;
+        align-items: center;
+    }
+    .top-title.active{
+        color:#000;
+        position:relative;
+    }
+      .top-title a{
+text-decoration: none;
+color:#000;
+      }
+    .top-title div{
+        position:relative;
+        padding-bottom:8px;
+        cursor: pointer;
+    }
+    .top-title .active::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background-color: #FF8C00;
+    }
+   .first-box{
+    width:393px;
+    height:203px;
+    border-radius: 0px 0px 8px 8px;
+    background-color: #fff;
+    margin-top:136px;
+    margin-bottom:10px;
+
+   }
+   .first-img{
+     width:100%;
+            height:auto;
+            object-fit: contain;
+            display:block;
+             justify-content: center;
+            align-items: center;
+            z-index:1;
+   }
+       .img-title{
+        color:#fff;
+        font-size:16px;
+        top:285px;
+        left:20px;
+        position:absolute;
+        z-index:30;
+        font-weight:bold;
+       }
+     .img-title2{
+        color:#fff;
+        font-size:12px;
+        top:309px;
+        left:20px;
+        position:absolute;
+        z-index:30;
+       }
+         .remain-time{
+        display:flex;
+        justify-content:space-between;
+        font-size:15px;
+        color:#000;
+        margin-bottom:8px;
+        
+      
+    }
+    .progress-bar{
+        width:100%;
+        height:8px;
+        background-color: #F1F1F1;
+        border-radius:10px;
+        overflow:hidden;
+    }
+    .progress-fill{
+        height:100%;
+        width:45%;
+        background-color:#3DA417;
+        border-radius: 50px;
+    }
+     .question-infomation{
+        padding:16px;
+        border-radius: 10px;
+        width:90%;
+        height:95px;
+          background-color:#fff;
+          margin-top:5px;
+          margin-left:14px;
+    }
+       .gz-title{
+        font-size:15px;
+        color:#000;
+        position:absolute;
+        top:459px;
+        left:20px;
+       }
+       .second-box{
+        width:342px;
+        height:125px;
+        background-color: #fff;
+        margin-top:35px;
+        margin-left:20px;
+        border-radius: 10px;
+        overflow: hidden;
+
+       }
+       .secend-title{
+        font-size:14px;
+        color:#6C6C6C;
+       padding-bottom:20px;
+        padding-top:10px;
+        padding-left:15px;
+        line-height:1.8;
+       }
+       .second-title span{
+        display:inline-block;
+       }
+       .zp-title{
+        font-size:15px;
+        color:#000;
+        position:absolute;
+        top:609px;
+        left:20px;
+       }
+       .zp-grid{
+        display:flex;
+        gap:8px;
+        overflow-x:auto;
+        padding-bottom:5px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+       }
+       .zp-grid::-webkit-scrollbar {
+        display: none;
+    }
+    .zp-item{
+        width:203px;
+        height:119px;
+        border-radius:10px;
+        flex-shrink:0;
+        overflow: hidden;
+    }
+    .zp-item img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+    .zp{
+        margin-top:45px;
+        margin-left:20px;
+        margin-right: 20px;
+        margin-bottom:25px;
+    }
+    .tz-btn{
+        width:334px;
+        height:44px;
+        background-color:#3DA417 ;
+        color:#fff;
+        font-size:24px;
+        font-weight:bold;
+        border-radius:10px ;
+        text-align:center;
+        align-items: center;
+        margin-bottom:15px;
+        margin-left:25px;
+        line-height:44px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="main-container">
+   <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+        </div>
+        <div class="top-container">
+        <div class="top-title">
+            <a href="shequ.html"><div >首页</div></a> 
+             <a href=".hd.html"><div>活动</div></a>
+            <a href="dk.html"><div class="active">打卡</div></a>
+        </div>
+        </div>
+        <div class="first-box">
+             <div class="img-title">助农打卡挑战</div>
+                <img src="picture/image45.png">
+               <div class="img-title2">参与助农行动，赢取丰厚奖励</div>
+            </div>
+            
+          <div class="question-infomation">
+                <div class="remain-time">
+                    <span>7天助农打卡计划</span>
+                    <span style="color:#3DA417;font-size:12px">进行中</span>
+                   
+                </div> 
+                
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="remain-time">
+                    <span style="font-size:12px;color:#818181;margin-top:8px;">已打卡3天</span>
+                     <span style="font-size:12px;color:#818181;margin-top:8px;">剩余4天</span>
+                </div>
+            </div>
+                <div class="gz-title">参与规则</div>
+                <div class="second-box">
+                    <div class="secend-title">
+                       <span>✅ &nbsp;&nbsp; 连续7天在社区发布助农相关内容</span><br>
+                       <span>✅  &nbsp;&nbsp; 内容需与瓯柑种植，采摘或非遗文化相关</span><br>
+                       <span>✅  &nbsp;&nbsp; 每天最多打卡1次，不可补打卡</span><br>
+                       <span>✅ &nbsp;&nbsp;  打卡7天后，获得500助农积分</span><br>
+                    </div>
+                </div>
+                 <div class="zp-title">优秀作品</div>
+                  <div class="zp">
+        
+        <div class="zp-grid">
+            <div class="zp-item">
+                <img src="picture/image46.png" >
+            </div>
+            <div class="zpitem">
+                <img src="picture/image47.png" alt="作品2">
+            </div>
+            <div class="zp-item"> 
+                <img src="picture/image48.png" alt="作品3">
+            </div>
+        </div>
+    </div>
+    <div class="tz-btn">立即参与挑战</div>
+     </div>
+        
+
+ 
+
+
+
+
+
+</body>
+</html>

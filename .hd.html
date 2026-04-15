@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    活动
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+        background-color:#ffffff;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        position:relative;
+        
+       
+    }
+    .top-container{
+        background-color:#fff;
+        padding-top:50px;
+        padding-left:3px;
+        width:100%;
+        height:133px;
+        position:absolute;
+        z-index:1;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom:2px solid #B9B9B9;
+        
+    }
+    .top-title{
+        display:flex;
+        gap:30px;
+        color:#000;
+        font-size:24px;
+        justify-content: center;
+        align-items: center;
+    }
+    .top-title.active{
+        color:#000;
+        position:relative;
+    }
+      .top-title a{
+text-decoration: none;
+color:#000;
+      }
+    .top-title div{
+        position:relative;
+        padding-bottom:8px;
+        cursor: pointer;
+    }
+    .top-title .active::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background-color: #FF8C00;
+    }
+   
+        .inside-box{
+            width:360px;
+            flex:1;
+            padding:10px;
+            margin-top:170px;
+            margin-left:16.5px;
+            gap:30px;
+            display:flex;
+            flex-direction: column;
+        }
+        .inside-img{
+            width:100%;
+            height:auto;
+            object-fit: contain;
+            display:block;
+        }
+        .inside-head{
+            display:flex;
+            align-items:center;
+            padding:10px;
+            gap:10px;
+        }
+       .image-title{
+        font-size:16px;
+        color:#ffffff;
+        position:absolute;
+        left:15px;
+        top:47px;
+        z-index:30;
+
+       }
+       .image-title2{
+         font-size:24px;
+        color:#ffffff;
+        position:absolute;
+        left:15px;
+        top:10px;
+        z-index:30;
+        font-weight: bold;
+       }
+       .image-container{
+        position: relative;
+        width:100%;
+       }
+      .image-btn{
+       
+        width:150px;
+        height:25px; 
+        background: linear-gradient(to bottom,#F8B814,#EE7412);
+        border-radius:11px;
+        text-align:center;
+        align-items:Center;
+        z-index:40;
+        position:absolute;
+        left:15px;
+        top:50px;
+       }
+      .image-title3{
+        font-size:16px;
+        color:#ffffff;
+        
+        z-index:30;
+        font-weight: bold;
+      }
+     
+
+       .last-box{
+        background-color:rgba(79,79,79,0.4);
+       width:320px;
+       height:27px;
+        font-size:13px;
+        color:#ffffff;
+        align-items:center;
+        position:absolute;
+        left:15px;
+        top:130px;
+        text-align: center;
+        line-height:27px;
+       }
+</style>
+</head>
+<body>
+<div class="main-container">
+   <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+        </div>
+        <div class="top-container">
+        <div class="top-title">
+            <a href="shequ.html"><div >首页</div></a> 
+             <a href=".hd.html"><div class="active">活动</div></a>
+           <a href="dk.html"> <div>打卡</div></a>
+        </div>
+        </div>
+            <div class="inside-box">
+                <div class="image-container">
+                   <a href="czj.html"> <img src="picture/Group21.png"class="inside-img"></a>
+                <div class="image-title">
+                    甜蜜采摘季
+                </div> 
+                </div>
+            
+        
+                <div class="image-container">
+                     <a href="ty.html">  <img src="picture/image240.png"class="inside-img"></a>
+                <div class="image-title2">
+                    采摘体验
+                </div> 
+                <div class="image-title">
+                    #新鲜直采 乐趣无穷
+                </div>
+                </div>
+
+                <div class="image-container">
+                  <a href="fl.html"><img src="picture/image241.png"class="inside-img"></a>  
+                <div class="image-title2">
+                    采摘福利
+                </div> 
+               <div class="image-btn">
+                <div class="image-title3">2月1日-2月13日</div>
+               </div>
+               <div class="last-box">地址：温州三垟湿地瓯柑种植基地  入园采摘享7折优惠</div>
+                </div>
+            </div>
+        
+
+ 
+
+
+
+
+        <div class="bottom-bar">
+                <div class="bottom-item ">
+                    <a href="shouye.html"> <img src="picture/home.png"></a>
+                    <span>首页</span>
+                </div>
+                <div class="bottom-item ">
+                    <a href="sc.html"><img src="picture/store.png"></a>
+                    <span>商城</span>
+                </div>
+                <div class="bottom-item active">
+                    <a href="shequ.html"><img src="picture/community.png"></a>
+                    <span>社区</span>
+                </div><div class="bottom-item ">
+                   <a href="wd.html"><img src="picture/person.png"></a> 
+                    <span>我的</span>
+                </div>
+            </div>
+</div>
+</body>
+</html>

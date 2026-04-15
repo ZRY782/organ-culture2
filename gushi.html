@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>故事</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            font-family: "微软雅黑", sans-serif;
+        }
+        .story-container {
+            width: 393px;
+            height: 852px;
+            background-color:#FAFAFA;
+            position:relative;
+            overflow: hidden;
+        }
+        .top-orange-bar{
+            width:100%;
+            background-color: #F88B38;
+            position:absolute;
+            height:150px;
+            left:0;
+            z-index:1;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    .top-nav{
+        width:100%;
+        height:60px;
+        display:flex;
+        align-items:center;
+        padding:0 16px;
+       
+        z-index:30;
+        margin-top:78px;
+    }
+    .back-btn{
+        color:#fff;
+        font-size: 25px;
+        text-decoration: none;
+        margin-right:20px;
+        margin-left:22px;
+    }
+    .gushi-title{
+        color:#fff;
+        font-size:28px;
+        font-weight:bold;
+        margin:0 auto ;
+        position:relative;
+        left:-20px;
+    }
+    .content-scroll{
+        width:100%;
+        /*height:100%;*/
+        height:702px;
+        padding-top:150px;
+
+        padding-bottom:15px;
+        overflow-y:auto;
+        scrollbar-width:none;
+        -ms-overflow-style:none;
+    }
+    .content-scroll::-webkit-scrollbar{
+        display:none;
+    }
+    .two-card-area{
+        display:flex;
+        justify-content:space-between;
+        padding:10px 16px;
+        margin-bottom:10px;
+        gap:15px;
+    }
+    .two-card{
+        width:48%;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        padding:15px 15px;
+        box-shadow:0 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .func-title{
+        font-size:16px;
+        font-weight:bold;
+        margin-bottom:5px;
+        color:#000;
+        text-decoration: none;
+    }
+    .func-desc{
+        font-size:14px;
+        color:#727272;
+    }
+    .story-box{
+        width:95%;
+        background-color:#fff;
+        border-radius: 8px;
+        margin:0 auto 15px auto;
+        overflow:hidden;
+    }
+    .story-img{
+        width:100%;
+        height:139px;
+        object-fit: cover;
+    }
+    .story-content{
+        padding :10px;
+    }
+    .story-title{
+        font-size: 16px;
+        font-weight: bold;
+        color:#000;;
+        margin-bottom:8px;
+        margin-left:10px;
+    }
+    .story-desc{
+        font-size:12px;
+        color:#727272;
+        margin-bottom:10px;
+        margin-left:10px;
+    }
+    .story-foot{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+    .read-btn{
+        background-color:#F88B38;
+        color:#fff;
+        border:none;
+        border-radius: 8px;
+        padding:5px 15px;
+        font-size:14px;
+        cursor:pointer;
+    }
+    .score-title{
+        font-size:14px;
+        color:#F88B38;
+        font-weight:bold;
+        
+    }
+        </style>
+ </head>
+ <body>
+    <div class="story-container">
+        <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+            <div class="top-orange-bar">
+            <div class="top-nav">
+                <a href="shouye.html"class="back-btn">&lt;</a>
+                <div class="gushi-title">瓯柑故事</div>
+            </div>
+            </div>
+        </div>
+        <div class="content-scroll">
+            <div class="two-card-area">
+                <div class="two-card">
+                    <img src="picture/rili.png">
+                    <div class="func-title">
+                        <a href="qiandao.html" style="text-decoration:none;color:#000;">每日签到</a>
+                    </div>
+                    <div class="func-desc">连续签到得积分<br>185积分/月</div>
+                </div>
+                <div class="two-card">
+                    <img src="picture/question.png">
+                    <div class="func-title">
+                        <a href="dati.html"style="text-decoration:none;color: #000;">知识答题</a></div>
+                    <div class="func-desc">答题赢积分<br>40积分/次</div>
+                </div>
+            </div>
+            <div class="story-box">
+                <img src="picture/story1.png"class="story-img">
+                <div class="story-content">
+                    <div class="story-title">贡果传奇</div>
+                    <div class="story-desc">南宋淳熙五年（1178），温州太守韩彦直写下《桔录》...</div>
+                    <div class="story-foot">
+                        <button class="read-btn">
+                            <a href="ggcq.html"style="text-decoration:none;color:#fff;">阅读</a></button>
+                        <div class="score-title">+10积分</div>
+                    </div>
+                </div>
+            </div>
+            <div class="story-box">
+                <img src="picture/story2.png"class="story-img">
+                <div class="story-content">
+                    <div class="story-title">金益丰：盼苦尽“柑”来</div>
+                    <div class="story-desc">2023年12月，温州市人民政府公布第十二批市场非遗名录...</div>
+                    <div class="story-foot">
+                        <button class="read-btn">阅读</button>
+                        <div class="score-title">+10积分</div>
+                    </div>
+                </div>
+            </div>
+            <div class="story-box">
+                <img src="picture/story3.png"class="story-img">
+                <div class="story-content">
+                    <div class="story-title">柑儿文：奶奶的处方</div>
+                    <div class="story-desc">每年落果季，祖母把掉下来的小青柑晒干，换作“柑儿文”...</div>
+                    <div class="story-foot">
+                        <button class="read-btn">阅读</button>
+                        <div class="score-title">+10积分</div>
+                    </div>
+                </div>
+            </div>
+            <div class="story-box">
+                <img src="picture/story4.png"class="story-img">
+                <div class="story-content">
+                    <div class="story-title">端午·瓯柑胜羚羊</div>
+                    <div class="story-desc">温州人得端午关键词：大桔。温州方言里“柑”与“官”同音...</div>
+                    <div class="story-foot">
+                        <button class="read-btn">阅读</button>
+                        <div class="score-title">+10积分</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+ </body>
+ </html>

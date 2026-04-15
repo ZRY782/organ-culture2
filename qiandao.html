@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>每日签到</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FAFAFA;
+            min-height: 100vh;
+            font-family: "微软雅黑", sans-serif;
+        }
+        .qiandao-container{
+            width:393px;
+            height:852px;
+            background-color:#FAFAFA;
+            position:relative;
+            overflow:hidden;
+        }
+        .top-nav{
+            width:100%; 
+            height:160px; 
+            background-color:#FFFFFF;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:0 15px;
+            margin: 0 auto; 
+            
+        }
+        .back-btn{
+            font-size:25px;
+            color:#000;
+            text-decoration: none;
+          width:25px;
+          margin-top:79px;
+        }
+        .page-title{
+            font-size:28px;
+            color:#000;
+            margin-top:79px;
+            flex:1;
+            margin-left:100px;
+           
+        }
+        .score-text{
+            font-size:14px;
+            color:#000;
+            width:90px;
+           text-align:left;
+            white-space:nowrap;
+            margin-top:90px;
+        }
+        
+        .calendar-card{
+            width:98%;
+            background-color:#fff;
+            border-radius: 20px;
+            margin:10px auto;
+        }
+        .month-title{
+            font-size:18px;
+            
+            margin-bottom:15px;
+            margin-left:10px;
+        }
+        .calendar-header{
+            display:grid;
+            grid-template-columns: repeat(7,1fr);
+            text-align:center;
+            font-size:20px;
+            color:#A7A7A7;
+            margin-bottom:10px;
+        }
+        .calendar-body{
+            display:grid;
+            grid-template-columns: repeat(7,1fr);
+            gap:10px;
+        }
+        .day-item{
+            width:30px;
+            height:30px;
+            border-radius: 50%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:17px;
+            margin:0 auto;
+        }
+        .day-item.checked{
+            background-color: #E7D4FF;
+            color:#000;
+            font-weight:600;
+        }
+        .day-item.unchecked{
+            color:#A7A7A7;
+        }
+        
+        .satas-area{
+    display: flex;
+    flex-direction:column;
+    
+    align-items:center; 
+    width:95%;
+    height:130px;
+    margin:20px auto 20px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding:15px 10px;
+    box-sizing: border-box;
+}
+      .stats-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px; 
+        }
+
+.stat-card{
+    display:flex;
+    align-items: center;
+    width:100%;  
+    gap:8px;
+    padding-left:15px;
+    padding-right:50px
+}
+        .stat-text{
+            font-size: 13px;
+            color:#808080;
+           text-align:left;
+            
+        }
+        .stat-text2{
+            font-size:16px;
+            font-weight:600;
+            
+            color:#000;
+        }
+        .progress-area{
+            width:95%;
+            height:10px;
+            background-color: #EFEFEF;
+            border-radius:5px ;
+            overflow:hidden;
+            margin-bottom:5px;
+            margin-top:10px;
+            
+        }
+        .progress-fill{
+            height:100%;
+            background-color:#5E02DD;
+            width:16%;
+        }
+        .progree-text{
+            display:flex;
+            justify-content: space-between;
+            font-size:10px;
+            color:#777777;
+            width:100%;
+        
+        }
+        .rule-area{
+            width:90%;
+            height:185px;
+            background-color: #fff;
+            border-radius: 20px;
+            padding:15px;
+            margin:0 auto;
+        }
+        .rule-title{
+            font-size:15px;
+            font-weight:600;
+            margin-bottom:15px;
+            text-align:center;
+        }
+        .rule-list{
+            font-size:13px;
+            color:#7F7F7F;
+            line-height:1.8;
+        }
+        .rule-btn{
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+            background-color: #5E02DD;
+            color:#fff;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:24px;
+            position:absolute;
+            bottom:25px;
+            right:25px;
+
+        }
+        </style>
+        </head>
+        <body>
+            <div class="qiandao-container">
+            <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+            </div>
+            <div class="top-nav">
+                <a href="gushi.html"class="back-btn">&lt;</a>
+                <div class="page-title">每日签到</div>
+                <div class="score-text">积分:120</div>
+            </div>
+            <div class="calendar-card">
+                <div class="month-title">2025年8月</div>
+                <div class="calendar-header">
+                    <div>日</div>
+                     <div>一</div>
+                      <div>二</div>
+                       <div>三</div>
+                        <div>四</div>
+                         <div>五</div>
+                          <div>六</div>
+                </div>
+                <div class="calendar-body">
+                    <div class="day-item unchecked">27</div>
+                    <div class="day-item unchecked">28</div>
+                    <div class="day-item unchecked">29</div>
+                    <div class="day-item unchecked">30</div>
+                    <div class="day-item unchecked">31</div>
+                    <div class="day-item checked">1</div>
+                    <div class="day-item checked">2</div>
+                    <div class="day-item checked">3</div>
+                    <div class="day-item checked">4</div>
+                    <div class="day-item checked">5</div>
+                    <div class="day-item checked">6</div>
+                    <div class="day-item checked">7</div>
+                    <div class="day-item unchecked">8</div>
+                    <div class="day-item checked">9</div>
+                    <div class="day-item checked">10</div>
+                    <div class="day-item checked">11</div>
+                    <div class="day-item checked">12</div>
+                    <div class="day-item checked">13</div>
+                    <div class="day-item unchecked">14</div>
+                    <div class="day-item unchecked">15</div>
+                    <div class="day-item unchecked">16</div>
+                    <div class="day-item checked">17</div>
+                    <div class="day-item unchecked">18</div>
+                    <div class="day-item unchecked">19</div>
+                    <div class="day-item unchecked">20</div>
+                    <div class="day-item checked">21</div>
+                    <div class="day-item unchecked">22</div>
+                    <div class="day-item unchecked">23</div>
+                    <div class="day-item unchecked">24</div>
+                    <div class="day-item unchecked">25</div>
+                    <div class="day-item unchecked">26</div>
+                    <div class="day-item unchecked">27</div>
+                    <div class="day-item unchecked">28</div>
+                    <div class="day-item unchecked">29</div>
+                    <div class="day-item checked">30</div>
+                    <div class="day-item unchecked">31</div>
+                     <div class="day-item unchecked">1</div>
+                      <div class="day-item unchecked">2</div>
+                       <div class="day-item unchecked">3</div>
+                        <div class="day-item unchecked">4</div>
+                         <div class="day-item unchecked">5</div>
+
+                </div>
+                
+                </div>
+                 <div class="satas-area">
+           
+            <div class="stats-items">
+                <div class="stat-card"> 
+                    <img src="picture/Group15.png" style="width:40px;height:40px;margin-right:10px">
+                    <div>
+                        <div class="stat-text">连续签到</div>
+                        <div class="stat-text2">6天</div> 
+                    </div>
+                </div>
+                <div class="stat-card"> 
+                    <img src="picture/Group15.png" style="width:40px;height:40px;margin-right:10px">
+                    <div>
+                        <div class="stat-text">本月积分</div>
+                        <div class="stat-text2">30分</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-area">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progree-text">
+                <span>0分</span>
+                <span>185分</span>
+            </div>
+        </div>
+<div class="rule-area">
+    <div class="rule-title">签到规则说明</div>
+    <div class="rule-list">
+        1.每日签到可获得5积分<br>
+        2.连续7天签到额外奖励10积分<br>
+                3. 每月签到满15天额外奖励20积分<br>
+                4. 积分可用于兑换商城优惠券和农券
+                <div class="rule-btn">📅</div>
+    </div>
+    
+</div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded",function(){
+        const ruleBtn = document.querySelector('.rule-btn');
+        
+        if(ruleBtn) {
+            ruleBtn.addEventListener('click', function() {
+                alert('今日打卡成功！ ✨');
+            });
+        }
+    });
+    
+</script>
+</body>
+</html>
+        

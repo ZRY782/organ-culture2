@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>游戏</title>
+    <style>
+        * {margin: 0;padding: 0;box-sizing: border-box;}
+        body {
+            width: 100vw;       
+            height: 100vh;      
+            overflow: hidden;   
+            background: #fff;   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .game-box {
+            width: 393px;       
+            height: 852px;      
+            position: relative;
+            border: 1px solid #eee;
+        }
+        .game-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            object-fit: contain; 
+            background: #fff;    
+        }
+        .back-btn{
+            font-size:25px;
+            color:#000000;
+            text-decoration: none;
+            width:50px;
+            position:absolute;
+            left:20px;
+            margin-top:80px;
+            z-index:10;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-box">
+     
+        <iframe id="gameIframe" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        <a href="yx.html" class="back-btn">&lt;</a>
+    </div>
+
+    
+    <script>
+       
+        const gameIframe = document.getElementById('gameIframe');
+        gameIframe.src = 'http://127.0.0.1:5500/game/ksyx.html';
+
+        gameIframe.onload = function() {
+            try {
+                gameIframe.contentWindow.document.domain = document.domain;
+            } catch (e) {
+                
+            }
+        };
+    </script>
+</body>
+</html>

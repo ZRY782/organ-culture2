@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    提交结果
+</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .score-container{
+        width:393px;
+        height:852px;
+        background-color: #FFAC69;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        position:relative;
+    }
+    .neirong-container{
+        width:359px;
+        height:766px;
+        background-color: #fff;
+        border-radius: 14px;
+        margin-top:70px;
+        }
+   .back-btn{
+        font-size:25px;
+            color:#000;
+            text-decoration: none;
+          width:50px;
+          position:absolute;
+          left:20px;
+          margin-top:30px;
+          z-index:10;
+    }
+    .page-title{
+        font-size:24px;
+            color:#000;
+            margin-top:30px;
+            flex:1;
+            width:100%;
+            text-align:center;
+    }
+    .score-img{
+        width:200px;
+        height:190px;
+        margin-bottom:0px;
+        margin-top:30px;
+    }
+    .result-text{
+        font-size:32px;
+        color:#000;
+        line-height:1.5;
+        margin-bottom:30px;
+        margin-top:10px;
+    }
+    .comment-text{
+            font-size:32px;
+            color:#000;
+            display:block;
+            margin-top:10px;
+        }
+    .score-text{
+        color:#D80B0B;
+        font-size:36px;
+        font-weight:bold;
+    }
+    .btn-style{
+        width:157px;
+        height:37px;
+        text-align:center;
+        font-size:20px;
+        cursor:pointer;
+        border-radius:20px;
+        margin-bottom:15px;
+
+    }
+    .chakan-btn{
+        background-color: #F4810F;
+        color:#fff;
+        width:150px;
+        height:37px;
+        text-align:center;
+        line-height:37px;
+        font-size:20px;
+        cursor:pointer;
+        border-radius:20px;
+        margin-bottom:15px;
+        margin-top:15px;
+       margin-left:110px;
+    }
+    .share-btn{
+        background-color:#fff;
+        border:2px solid #FF6F00;
+        color:#F58F29;
+        border-radius:20px;
+       width:150px;
+        height:37px;
+        line-height:37px;
+        cursor:pointer;
+        margin-left:110px;
+        text-align:center;
+        font-size:20px;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="score-container">
+            <div class="top-img">
+                 <img src="picture/Status bar.png"class="top-img">
+            </div>
+           
+            <div class="neirong-container">
+                <a href="gushi.html"class="back-btn">&lt;</a>
+            <div class="page-title">提交结果</div>
+            <img src="picture/image64.png" class="score-img">
+            <div class="result-text"id="resutlDisplay">
+            本次答对<span class="score-text"id="correctCount">0</span>题<br>
+            获得<span class="score-text"id="totalScore">0</span>积分<br>
+            <span class="comment-text" id="comment">实力不容小觑啊！</span> 
+            
+                <div class="chakan-btn">查看题目详情</div>
+                <div class="share-btn">我要分享</div>
+            </div>
+            
+            </div>
+          
+            
+        </div>
+        <script>
+            window.onload=function(){
+                const urlParams=new URLSearchParams(window.location.search);
+                const correct=urlParams.get('correct');
+                const score=urlParams.get('score');
+
+                if (correct !== null && score !== null) {
+                document.getElementById('correctCount').textContent = correct;
+                document.getElementById('totalScore').textContent = score;
+
+                const correctNum = parseInt(correct);
+                let comment = '';
+                if (correctNum <= 2) comment = '再努力一把哟～';
+                else if (correctNum === 3) comment = '还不错，继续加油！';
+                else if (correctNum === 4) comment = '实力不容小觑啊！';
+                else if (correctNum === 5) comment = '太棒啦！满分！';
+                
+                document.getElementById('comment').textContent = comment;
+            }
+        }
+            
+        </script>
+    </body>

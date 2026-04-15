@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    购买订单
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+        background-color:#FAFAFA;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        position:relative;
+    }
+    .back-btn{
+        position:absolute;
+        top:66px;
+        left:20px;
+        font-size:25px;
+        color:#000;
+        text-decoration:none;
+        z-index:10;
+    }
+  .head-box{
+        width:393px;
+        height:130px;
+        z-index:5;
+        left:5px;
+        background-color: #fff;
+         align-items: center;
+         
+    }
+    .title{
+        margin-left:50px;
+        font-size:20px;
+        color:#000;
+       
+        margin-top:70px;
+        
+    }
+    .address-box{
+        width:95%;
+        height:42px;
+        padding:15px;
+       border-radius:10px;
+        background-color: #Fff;
+        display:flex;
+        justify-content: space-between;
+        margin-top:20px;
+        text-align:center;
+        align-items: center;
+        margin-left:10px;
+    }
+    .address-text{
+        font-size:16px; 
+        color:#000;
+    }
+    .address-arrow{
+        color:#A8A8A8;
+        font-size:20px;
+    }
+    .store-box{
+        width:95%;
+         /*height:120px;*/
+        padding:15px;
+       border-radius:10px;
+        background-color: #Fff;
+       /* display:flex;*/
+        margin-top:15px;
+        
+        margin-left:10px;
+    }
+    .store-name{
+        color:#000;
+        margin-bottom:10px;
+        margin-left:5px;
+        font-size:14px;
+    }
+    .store-line{
+        width:95%;
+        height:1px;
+        background-color: #E6E6E6;
+        margin-bottom:10px;
+    }
+    .product-box{
+        display:flex;
+        gap:15px;
+        align-items:flex-start;
+        
+    }
+    .product-img{
+        width:80px;
+        height:80px;
+        border-radius: 3px;
+        overflow:hidden;
+        
+    }
+    .product-img img{
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+    }
+    .product-information{
+        flex:1;
+        display:flex;
+        justify-content: space-between;
+    }
+    .product-name{
+        font-size:13px;
+        color:#717171;
+        margin-bottom:5px;
+    }
+    .product-right{
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+        align-items:flex-end;
+        margin-top:auto;
+    }
+    .product-details{
+        flex:1;
+    }
+    .product-price{
+        color:#000;
+        font-size:16px;
+        font-weight: bold;
+        margin-top:5px;
+        /*margin-left:60px;*/
+        margin-bottom:5px;
+    }
+    .product-quantity{
+        color:#7A7A7A;
+        font-size:16px;
+    }
+    .remark-content{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .remark-left{
+        font-size:14px;
+        color:#000;
+    }
+    .remark-right{
+        display:flex;
+        align-items: center;
+        gap:5px;
+        font-size:13px;
+        color:#717171;
+    }
+    .remark-box{
+        width:95%;
+        padding:15px;
+       border-radius:10px;
+        background-color: #Fff;
+       
+        margin-top:15px;
+        
+        margin-left:10px;
+    }
+    .totalprice-box{
+        width:95%;
+        padding:15px;
+       border-radius:10px;
+        background-color: #Fff;
+        margin-top:15px;
+        margin-left:10px;
+    }
+    .totalprice-content{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom:8px;
+    }
+   .bottom-pay{
+    margin-top:175px;
+    padding:15px;
+    background-color: #fff;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height:70px;
+   }
+   .pay-total{
+   color:#000;
+   font-size:16px;
+   font-weight:bold;
+   }
+   .pay-btn{
+    background-color: #FF8C00;
+    border-radius:50px;
+    border:none;
+    width:100px;
+    height:40px;
+    font-size:14px;
+    color:#fff;
+    cursor:pointer;
+    font-weight:bold;
+   }
+    </style>
+    </head>
+    <body>
+        <div class="main-container">
+           
+                <div class="top-img"></div>
+            <img src="picture/Status bar.png"class="top-img"> 
+            <div class="head-box">
+             <a href="gwctz.html"class="back-btn">&lt;</a>
+             <div class="title">确认订单</div>
+             </div>
+            
+            <div class="address-box">
+                <div class="address-text">请选择收获地址</div>
+                <div class="address-arrow">></div>
+            </div>
+            <div class="store-box">
+                <div class="store-name">瓯柑商城</div>
+                <div class="store-line"></div>
+                <div class="product-box">
+                    <div class="product-img">
+                    <img src="picture/product.png">
+                </div>
+                <div class="product-information">
+                    <div class="product-details">
+                         <div class="product-name">正宗温州三垟湿地瓯柑苦橘</div>
+                    <div class="product-name"id="showSpec">净重（不含箱）:5斤；规格:中果</div>
+                    <div class="product-name">坏单包退 生鲜极速退</div>
+                    
+                    </div>                   
+                </div>
+                <div class="product-right">
+                    <div class="product-price"id="showPrice">￥67.5</div>
+                    <div class="product-quantity"id="showNum">x1</div>
+                </div>
+                
+                </div>
+                
+                
+
+            </div>
+            <div class="remark-box">
+                    <div class="remark-content">
+                    <div class="remark-left">订单备注</div>
+                    <div class="remark-right">特殊需求请留言备注 ></div>
+                </div>
+                </div>
+                <div class="totalprice-box">
+                    <div class="totalprice-content">
+                        <span>商品金额</span>
+                        <span id="showAmount">￥67.5</span>
+                    </div>
+                    <div class="totalprice-content">
+                        <span>运费</span>
+                        <span>￥0</span>
+                    </div>
+                    <div class="totalprice-content">
+                        <span>活动优惠</span>
+                        <span>-￥0</span>
+                    </div>
+                    <div class="totalprice-content">
+                        <span>优惠券抵扣</span>
+                        <span style="color:#FF8C00">无可用优惠券：-￥0></span>
+                    </div>
+                    <div class="totalprice-content">
+                        <span style="color:#D80B0B">合计</span>
+                        <span style="color:#D80B0B" id="showTotal">￥67.5</span>
+                    </div>
+                </div>
+                <div class="bottom-pay">
+                   <span>合计：<span class="pay-total"style="color:#D80B0B;font-size:20px"id="showPay">￥67.5</span></span>
+                <a href="jgp.html"><button class="pay-btn">去支付</button></a>
+                </div>
+        </div>
+<script>
+    window.onload = function() {
+            
+            const p = new URLSearchParams(location.search);
+            const weight = decodeURIComponent(p.get('w') || '5斤');
+            const size = decodeURIComponent(p.get('s') || '中果');
+            const price = p.get('p') || '67.5';
+            const num = p.get('n') || '1';
+            const total = p.get('t') || '67.5';
+
+            
+            const elSpec = document.getElementById('showSpec');
+            const elPrice = document.getElementById('showPrice');
+            const elNum = document.getElementById('showNum');
+            const elAmount = document.getElementById('showAmount');
+            const elTotal = document.getElementById('showTotal');
+            const elPay = document.getElementById('showPay');
+
+            if(elSpec) elSpec.innerText = `净重（不含箱）:${weight}；规格:${size}`;
+            if(elPrice) elPrice.innerText = '￥' + price;
+            if(elNum) elNum.innerText = 'x' + num;
+            if(elAmount) elAmount.innerText = '￥' + price;
+            if(elTotal) elTotal.innerText = '￥' + total;
+            if(elPay) elPay.innerText = '￥' + total;
+        };
+</script>
+
+    </body>
+    </html>

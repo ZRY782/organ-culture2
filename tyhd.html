@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    体验活动
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+         background-color:#fff;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        position:relative;
+        
+       
+    }
+    .top-container{
+        width:393px;
+        height:108px;
+        top:0;
+         
+          justify-content: space-between;
+          align-items:center;
+          position:relative;
+
+
+    }
+    .top-title{
+        font-size:24px;
+        text-align: center;
+        align-items: center;
+        color:#000;
+        font-weight:bold;
+        top:85px;
+        left:144px;
+        position: absolute;
+    }
+    .back-btn{
+        font-size:30px;
+            color:#000;
+            text-decoration: none;
+          width:25px;
+          top:79px;
+          margin-left:20px;
+          position: relative;
+          z-index:10;
+    }
+    .gz-title{
+        font-size:16px;
+        color:#000;
+        position: relative;
+        top:50px;
+        left:337px;
+    }
+    .blue-box{
+        width:393px;
+        height:154px;
+        background: linear-gradient(to bottom,#0F81DB,#B3DDFF);
+        position: relative;
+        margin-top:30px;
+        color:#fff;
+        padding:20px;
+    }
+    .blue-img{
+        width:157px;
+        height:169px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px; 
+        position: relative;
+        left: 210px;
+       top:-155px;
+
+    }
+       
+    .blue-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .blue-box.current{
+        font-size:18px;
+        opacity: 0.9;
+    }
+    .blue-box .score{
+        font-size:40px;
+        margin:5px 0;
+        font-weight: bold;
+    }
+    .blue-box .bill{
+        font-size:15px;
+        opacity: 0.9;
+    }
+    .blue-box .title{
+        font-size:13px;
+        opacity: 0.9;
+        margin-top:5px;
+    }
+    .smll-box{
+        background-color:#F8F8F8 ;
+        color:#9C0000;
+        font-size:11px;
+        width:393px;
+        height:31px;
+        text-align: center;
+        align-items: center;
+        line-height: 31px;
+        font-weight:bold;
+        border-bottom: 2px solid #eee;
+    }
+    .tabs {
+            display: flex;
+            background-color: #fff;
+            border-bottom: 4px solid #eee;
+            height:52px;
+        }
+         .tab-item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:100%;
+        text-decoration: none;
+    }
+    
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 16px;
+            color: #000;
+            border-bottom: 3px solid transparent;
+            height:100%;
+        width:100%;
+        }
+        .tab.active {
+            color: #1D88DE;
+            border-bottom:3px solid #1D88DE;
+            font-weight: bold;
+        }
+        .goods-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 15px;
+        }
+        .goods-item {
+            background-color: #F6F6F6;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+        }
+        .goods-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .goods-name {
+            color:#000;
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+        .goods-points {
+            color: #1081DB;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .goods-exchange {
+            
+            width:67px;
+            height:22px;
+            border-radius: 8px;
+            background-color: #DEDEDE;
+            color: #000;
+            font-size: 14px;
+            text-align: center;
+            align-items: center;
+            line-height: 22px;;
+            cursor:pointer;
+            margin-left:30px;
+        }
+       
+        .goods-exchange.active {
+            
+            background-color: #68B3EF;
+            color: #fff;
+            cursor: pointer;
+        }
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            min-width: 280px;
+            text-align: center;
+        }
+        .modal-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .modal-content button {
+            padding: 8px 24px;
+            background-color: #007aff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+   
+    </style>
+    
+    </head>
+    <body>
+         <div class="main-container">
+            <div class="top-container">
+                <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+        </div> 
+       <a href="wd.html"class="back-btn">&lt;</a>
+        <div class="top-title">积分商城</div>
+       <a href="gz.html"style="text-decoration:none"> <div class="gz-title">规则</div></a>
+</div>
+<div class="blue-box">
+    <div class="current">当前积分</div>
+    <div class="score">100</div>
+    <a href="jfzd.html"style="text-decoration:none;color:#fff"><div class="bill">积分账单></div></a>
+    <div class="title">☺️已有100人参与今日助农</div>
+<div class="blue-img">
+    <img src="picture/jb.png">
+</div>
+
+</div>
+<div class="smll-box">
+    今日共同助力，已为温州瓯柑农户节省100kg肥料，已有100人参与今日助农
+</div>
+<div class="tabs">
+        <a href="jfsc.html" class="tab-item">
+            <div class="tab">瓯柑商城券</div>
+        </a> 
+       <a href="nywz.html"class="tab-item">
+        <div class="tab ">农用物资</div>
+    </a>
+       <a href="tyhd.html"class="tab-item">  
+       <div class="tab active">体验活动</div>
+    </a>
+    </div>
+<div class="goods-list">
+    <div class="goods-item">
+        <img src="picture/image104.png"style="width:153px;height:131px;">
+        <div class="goods-name">三垟湿地瓯柑采摘券</div>
+        <div class="goods-points">1500积分</div>
+        <div class="goods-name"> </div>
+        <div class="goods-exchange ">兑换</div>
+    </div> 
+    
+    <div class="goods-item">
+        <img src="picture/image105.png"style="width:153px;height:131px;">
+        <div class="goods-name">农耕文化研学体验券</div>
+        <div class="goods-points">2000积分</div>
+        <div class="goods-exchange "style="margin-left:40px">兑换</div>
+    </div> 
+
+
+   
+    
+</div>
+<div class="modal" id="scoreModal">
+    <div class="modal-content">
+        <p id="modalMessage">兑换成功</p>
+        <button id="closeModalBtn">确定</button>
+    </div>
+</div>
+</div>
+<script>
+  let Score=100;
+  let allButtons=document.querySelectorAll('.goods-exchange');
+  let modal=document.getElementById('scoreModal');
+  let modalMessage=document.getElementById('modalMessage');
+  let closeBtn=document.getElementById('closeModalBtn');
+
+  for(let i=0;i<allButtons.length;i++){
+    allButtons[i].onclick=function(){
+        let card=this.closest('.goods-item');
+        let posintsText=card.querySelector('.goods-points').innerText;
+        let needScore=parseInt(posintsText);
+        if(Score>=needScore){
+            modalMessage.innerText="兑换成功！请注意确认地址并查收"
+        }
+        else{
+            modalMessage.innerText="积分不够哦，快去赚积分吧！"
+        }
+        modal.classList.add('show');
+    }
+  }
+   closeBtn.onclick=function(){
+    modal.classList.remove('show');
+   }
+   
+
+
+    </script>
+</body>
+</html>

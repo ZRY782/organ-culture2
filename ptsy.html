@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>拼图</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        min-height:100vh;
+        overflow:auto;
+    } 
+    .main-container{
+        width:393px;
+        height:852px;
+        background-image: url('picture/pt.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position:relative;
+    }
+    .back-btn{
+        position:absolute;
+        top:40px;
+        left:20px;
+        font-size:28px;
+        color:#ffffff;
+        text-decoration:none;
+        z-index:10;
+    }
+    .card-1-link{
+        position:absolute;
+        top:260px;
+        left:30px;
+        width:335px;
+        height:170px;
+        cursor:pointer;
+        z-index:5;
+        background:transparent;
+    }
+    .bottom-box{
+        position:absolute;
+        bottom:20px;
+        left:20px;
+        width:335px;
+        height:70px;
+        border:4px solid #000;
+        border-radius:20px;
+        background:#fff;
+        z-index:5;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .bottom-nav{
+        position:absolute;
+        bottom:28px;
+        left:25px;
+        width:335px;
+        height:75px; 
+        display:flex;
+        z-index:6;
+        pointer-events:none;
+    }
+    .nav-item{
+        pointer-events:all;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:36px;
+    }
+    .nav-home{
+        width:110px;
+        height:100%;
+        background:#FFD233;
+       border-radius: 16px;
+    }
+    .nav-puzzle{
+        width:120px;
+        height:100%;
+        background:#fff;
+    }
+    .nav-set{
+        flex:1;
+        height:100%;
+        background:#fff;
+        border-top-right-radius:16px;
+        border-bottom-right-radius:16px;
+    }
+</style>
+</head>
+<body>
+    <div class="main-container">
+       <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+       </div>
+       <a href="yx.html"class="back-btn">&lt;</a>
+      
+       <a href="javascript:;" class="card-1-link"></a>
+       <div class="bottom-nav">
+            <div class="nav-item nav-home">
+                <img src="picture/home3.png">
+            </div>
+            <div class="nav-item nav-puzzle">
+                <img src="picture/pt2.png">
+            </div>
+            <div class="nav-item nav-set">
+                <img src="picture/settings.png">
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    const PT2_SERVER_URL = 'http://127.0.0.1:5500/game/pt2.html';
+    document.querySelector('.card-1-link').addEventListener('click', function() {
+        window.location.href = PT2_SERVER_URL;
+    });
+</script>
+</body>
+</html>

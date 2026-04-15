@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    加入购物车
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+        background-color:#Fff;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        position:relative;
+    }
+    .back-btn{
+        position:absolute;
+        top:40px;
+        left:20px;
+        font-size:25px;
+        color:#fff;
+        text-decoration:none;
+        z-index:10;
+    }
+    .head-box{
+        width:393px;
+        height:122px;
+        z-index:5;
+        left:5px;
+        
+    }
+    .head-box img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        display:block;
+       
+    }
+    .goods-head{
+        display:flex;
+        align-items:center;
+        padding:10px 10px;
+        
+        
+    }
+    .goods-img{
+        width:132px;
+        height:125px;
+        border-radius:11px;
+        margin-right:15px;
+        object-fit:cover;
+        margin-top:10px;
+
+    }
+    .goods-price-area{
+        flex:1;
+    }
+    .price{
+        font-size:36px;
+        color:#B91E1E;
+        font-weight:bold;
+        margin-bottom:10px;
+        
+    }
+    .quantity-area{
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
+    .quantity-btn{
+        width:40px;
+        height:40px;
+        background-color:#4C76F5;
+        color:#fff;
+        border:none;
+        border-radius:50px;
+        font-size:20px;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        text-align:center;
+    }
+    .quantity-btn:active{
+        transform:scale(0.95);
+    }
+    .quantity-input{
+       width:20px;
+        text-align:center;
+        border:none;
+        outline:none;
+        font-size:23px;
+        background-color:transparent;
+    }
+    .option-group{
+      
+        padding:10px 10px;
+
+    }
+    .option-title{
+        font-size:17px;
+        color:#000;
+        margin-bottom:10px;
+    }
+    .option-list{
+        display:flex;
+        gap:10px;
+    }
+    .option-item{
+        padding:6px 10px;
+        font-size:16px;
+        color:#000;
+        cursor:pointer;
+    }
+    .option-item.active{
+        border:2px solid#B91E1E;
+        color:#000;
+        background-color: #D9D9D9;
+    }
+    .foot{
+        padding:20px;
+        margin-top:300px;
+    }
+    .bottom-text{
+        text-align:center;
+        font-size:16px;
+        color:#D80B0B;
+        margin-bottom:15px;
+    }
+    .add-btn{
+        width:350px;
+        height:42px;
+        background-color: #F88B38;
+        color:#fff;
+        border:none;
+        cursor: pointer;
+       font-size:24px;
+
+
+    }
+    .top-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        z-index: 15; 
+    }
+    .top-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display:block;
+    }
+
+    </style>
+    </head>
+    <body>
+        <div class="main-container">
+        
+            <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+            </div>
+            <a href="xqy.html"class="back-btn">&lt;</a>
+            <div class="head-box">
+                <img src="picture/imagebg.png">
+            </div>
+            <div class="goods-head">
+                <img src="picture/image77.png"class="goods-img">
+                <div class="goods-price-area">
+                    <div class="price" id="unitPrice">￥67.5</div>
+                    <div class="quantity-area">
+                        <button class="quantity-btn"id="minusBtn">- </button>
+                        <input type="text" class="quantity-input" id="quantityInput"value="1" readonly>
+                        <button class="quantity-btn"id="plusBtn">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="option-group">
+                <div class="option-title">净重（不含箱）</div>
+                <div class="option-list">
+                    <div class="option-item active"data-type="weight" data-value="5斤" data-price="67.5">5斤</div>
+                     <div class="option-item "data-type="weight" data-value="10斤" data-price="135">10斤</div>
+                </div>
+            </div>
+            <div class="option-group">
+                <div class="option-title">规格</div>
+                <div class="option-list">
+                    <div class="option-item active"data-type="size" data-value="中果">中果</div>
+                     <div class="option-item "data-type="size" data-value="大果">大果</div>
+                </div>
+            </div>
+            <div class="foot">
+                <div class="bottom-text">坏单包退，极速退</div>
+                
+                <button class="add-btn"onclick="gobuy()">立即购买</button>
+            </div>
+
+            <script>
+        
+        const qtyInput = document.getElementById('quantityInput');
+        const minusBtn = document.getElementById('minusBtn');
+        const plusBtn = document.getElementById('plusBtn');
+
+        if(minusBtn && plusBtn && qtyInput){
+            minusBtn.addEventListener('click',function(){
+                let current=parseInt(qtyInput.value)||1;
+                if(current>1){
+                    qtyInput.value=current-1;
+                }
+            });
+            plusBtn.addEventListener('click',function(){
+                let current=parseInt(qtyInput.value)||1;
+                
+                    qtyInput.value=current+1;
+                
+            });
+        }
+
+       
+
+    
+        const optionItems = document.querySelectorAll('.option-item');
+        optionItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const type = this.dataset.type;
+                document.querySelectorAll(`[data-type="${type}"]`).forEach(i => {
+                    i.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+       const unitPrice = document.getElementById('unitPrice');
+        document.querySelectorAll('[data-type="weight"]').forEach(item=>{
+        item.addEventListener('click',()=>{
+        unitPrice.innerText = "￥" + item.dataset.price;
+    })
+})
+function gobuy(){
+    const activeWeight = document.querySelector('[data-type="weight"].active');
+                const weight = activeWeight.dataset.value;
+                const price = activeWeight.dataset.price; 
+                const size = document.querySelector('[data-type="size"].active').dataset.value;
+                const num = document.getElementById('quantityInput').value;
+                const total = (Number(price) * Number(num)).toFixed(1); 
+
+    location.href = `gmdd.html?w=${encodeURIComponent(weight)}&s=${encodeURIComponent(size)}&p=${price}&n=${num}&t=${total}`;
+}
+    </script>
+
+
+
+
+
+            </div>
+    </body>
+    </html>

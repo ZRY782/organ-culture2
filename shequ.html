@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>
+    社区
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    body{
+        margin:0;
+        justify-content:center;
+        align-items:center;
+        background-color: #f0f0f0;
+        font-family:"微软雅黑",sans-serif;
+        overflow: auto;
+        display:flex; 
+        min-height:100vh;
+    }
+    .main-container{
+        width:393px;
+        height:852px;
+        background-color:#FBFBFB;
+        display:flex;
+        flex-direction:column;
+        overflow:hidden;
+        position:relative;
+        padding-bottom:50px;
+    }
+    .content-scroll{
+        width:100%;
+        flex:1;
+        padding-top:133px;
+        padding-bottom:30px;
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .content-scroll::-webkit-scrollbar {
+            display: none;
+        }
+    .top-container{
+        background-color:#fff;
+        padding-top:50px;
+        padding-left:40px;
+        width:100%;
+        height:133px;
+        position:absolute;
+        z-index:1;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom:2px solid #B9B9B9;
+        
+    }
+    .top-title{
+        display:flex;
+        gap:30px;
+        color:#000;
+        font-size:24px;
+        justify-content: center;
+        align-items: center;
+    }
+    .top-title.active{
+        color:#000;
+        position:relative;
+    }
+      .top-title a{
+text-decoration: none;
+color:#000;
+      }
+    .top-title div{
+        position:relative;
+        padding-bottom:8px;
+        cursor: pointer;
+    }
+    .top-title .active::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background-color: #FF8C00;
+    }
+   
+        .inside-box{
+            width:95%;
+            background-color: #fff;
+            margin:10px auto;
+            overflow: hidden;
+        }
+        .inside-img{
+            width:95%;
+            height:auto;
+            object-fit: cover;
+            margin-left:10px;
+        }
+        .inside-head{
+            display:flex;
+            align-items:center;
+            padding:10px;
+            gap:10px;
+        }
+        .user-img{
+            width:36px;
+            height:36px;
+            border-radius:50%;
+        }
+        .user-info{
+            flex:1;
+        }
+        .user-name{
+            font-size: 16px;
+            color:#000;
+        }
+        .user-time{
+            font-size:12px;
+            color:#777777;
+            margin-top:5px;
+        }
+        .post-title{
+            font-size: 13px;
+            color:#000;
+            line-height:1.5;
+            margin-left:15px;
+            margin-bottom:10px;
+            margin-top:3px;
+        }
+        .post-imgs{
+            display:flex;
+            gap:10px;
+            padding:0 15px 10px;
+        }
+       .post-imgs img{
+        width:31%;
+        height:103px;
+        object-fit: cover;
+        border-radius:8px;
+
+       }
+       .xh-icon{
+        width:20px;
+        height:20px;
+        color:#717171;
+        margin-top:5px;
+        margin-bottom: 5px;
+        margin-left:30px;
+       }
+       .num-128{
+        font-size:12px;
+        color:#717171;
+        
+       }
+       .bm-btn{
+        color:#FF8C00;
+        font-size:15px;
+        width:114px;
+        height:34px;
+        border-radius: 50px;
+        background-color: #fff;
+        border:2px solid #FF8C00;
+        margin:10px auto 10px 125px;
+        line-height:34px;
+        text-align:center;
+       }
+       .box-group {
+         display: flex;
+          gap: 6px; 
+         padding: 0 15px 10px; 
+        align-items: center;
+}
+       .last-box{
+        background-color: #F9F9F9;
+        border-radius: 50px;
+        font-size:13px;
+        color:#000;
+        margin-left:10px;
+       
+        align-items:center;
+        width:auto;
+        height:22px;
+        line-height:22px;
+       }
+</style>
+</head>
+<body>
+<div class="main-container">
+   <div class="top-img">
+            <img src="picture/Status bar.png"class="top-img">
+        </div>
+        <div class="top-container">
+        <div class="top-title">
+            <a href="shequ.html"><div class="active" >首页</div></a> 
+             <a href=".hd.html"><div >活动</div></a>
+            <a href="dk.html"><div>打卡</div></a>
+            <a href="fb.html"><img src="picture/Group20.png"></a>
+        </div>
+        </div>
+        <div class="content-scroll">
+            <div class="inside-box">
+                <img src="picture/image34.png"class="inside-img">
+                <div class="post-title">
+                    🧭温州瓯海区三垟街道<br>当前果园开放采摘区域：A区、B区<br>预计成熟期：11月-12月
+                </div>
+            </div>
+            <div class="inside-box">
+                <div class="inside-head">
+                    <div class="user-img">
+                    <img src="picture/tx1.png">
+                </div>
+                <div class="user-info">
+                    <div class="user-name">
+                    果农老王
+                </div>
+                <div class="user-time">
+                    认证果农·2小时前
+                </div>
+                </div>
+                </div>
+                <div class="post-title">
+                    今年瓯柑长势喜人，预计今年产量能比去年增加20%，<br>
+个大饱满，酸甜适中，欢迎大家来果园体验采摘乐趣！
+                </div>
+                <div class="post-imgs">
+                    <img src="picture/image35.png">
+                    <img src="picture/image36.png">
+                    <img src="picture/image37.png">
+                </div>
+                <div style="display: flex; align-items: center; margin-left:2px; margin-top: 2px; margin-bottom: 5px;">
+            <div class="xh-icon">
+                <img src="picture/xh.png"> 
+            </div>
+                <span class="num-128">128</span>
+                <div class="xh-icon">
+                <img src="picture/pl.png"> 
+            </div>
+                <span class="num-128">24</span>
+                <div class="xh-icon">
+                <img src="picture/fx.png"> 
+            </div>
+                <span class="num-128">分享</span>
+                </div>
+        </div>
+        <div class="inside-box">
+                <div class="inside-head">
+                    <div class="user-img">
+                    <img src="picture/tx2png.png">
+                </div>
+                <div class="user-info">
+                    <div class="user-name">
+                    小柑同学
+                </div>
+                <div class="user-time">
+                    助农达人·昨天
+                </div>
+                </div>
+                </div>
+                <div class="post-title">
+                    周末带家人来体验瓯柑采摘，孩子们玩得很开心<br>
+果农老王特别热情！大家感兴趣的来参加！
+                </div>
+                <img src="picture/image38.png"class="inside-img">
+                <div class="bm-btn">报名下周采摘</div>
+        </div>
+<div class="inside-box">
+                <div class="inside-head"> 
+                    <div class="user-name"style="color:#FF8C00;font-size:20px;font-weight:bold">#</div>
+                <div class="user-info">
+                    <div class="user-name">
+                    #瓯柑苦尽柑来#
+                </div>
+                <div class="user-time">
+                    阅读量：24.5万·讨论：3,421
+                </div>
+                </div>
+                </div>
+                <img src="picture/image39.png"class="inside-img">
+               <div class="post-title">
+                瓯柑作为温州传统水果，已有1300多年种植历史，
+其“先苦后甜”的特点蕴含着深刻的人生哲理。
+
+               </div>
+               <div class="box-group">
+                <div class="last-box">#温州老味道#</div>
+                <div class="last-box">#二十四节气食俗#</div>
+                <div class="last-box">#非遗美食#</div>
+               </div>
+        </div>
+
+
+
+
+        <div class="bottom-bar">
+                <div class="bottom-item ">
+                    <a href="shouye.html"> <img src="picture/home.png"></a>
+                    <span>首页</span>
+                </div>
+                <div class="bottom-item ">
+                    <a href="sc.html"><img src="picture/store.png"></a>
+                    <span>商城</span>
+                </div>
+                <div class="bottom-item active">
+                    <a href="shequ.html"><img src="picture/community2.png"></a>
+                    <span>社区</span>
+                </div><div class="bottom-item ">
+                   <a href="wd.html"><img src="picture/person.png"></a> 
+                    <span>我的</span>
+                </div>
+            </div>
+</div>
+</body>
+</html>
